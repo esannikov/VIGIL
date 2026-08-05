@@ -30,11 +30,13 @@ Human authority remains explicit. The researcher controls publication and the pr
 
 ## System map
 
-![VIGIL system map](assets/system-map.svg)
-
-<p align="center"><sub><strong>Figure 2.</strong> Current VIGIL v6 alpha architecture. Blue marks the autonomous cycle, gray marks trace and advisory memory, and green marks human authority.</sub></p>
-
-The map uses the [Carbon Design System](https://carbondesignsystem.com/) as a visual framework: Gray 100 layers, IBM Plex hierarchy, spacing tokens and directly labelled flows. Blue marks the autonomous nightly path; gray carries provenance and memory; green marks decisions reserved for human review.
+<p align="center">
+  <a href="assets/system-map.png">
+    <img src="assets/system-map.png" width="820" alt="VIGIL autonomous art cycle with reflective memory">
+  </a>
+  <br>
+  <sub><strong>Figure 2.</strong> Current VIGIL v6 alpha architecture. Blue marks the autonomous cycle, violet marks reflective memory and trace, and green marks human authority. Tap or click the image to inspect it at full size.</sub>
+</p>
 
 ### Current modules
 
@@ -300,8 +302,6 @@ Weiss, J., & Wheeler, A. (Eds.). (2015). *On Kawara—Silence*. Guggenheim Museu
 Wiggins, G. A. (2006). A preliminary framework for description, analysis and comparison of creative systems. *Knowledge-Based Systems, 19*(7), 449–458. https://doi.org/10.1016/j.knosys.2006.04.009
 
 ### System and memory infrastructure
-
-IBM. (n.d.). *Carbon Design System*. Retrieved August 5, 2026, from https://carbondesignsystem.com/
 
 Sannikov, E. (2026). *VIGIL: An autonomous art machine with reflective memory* (Version 6 alpha) [Research software]. GitHub. https://github.com/esannikov/VIGIL
 
