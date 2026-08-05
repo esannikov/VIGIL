@@ -19,8 +19,8 @@ VIGIL is an ongoing research prototype developed by Eugene Sannikov within his P
       <sub><strong>Figure 1.</strong> <em>The Crossing Leads Back</em> (2026). A stair crosses a fortified border and returns to its point of origin.</sub>
     </td>
     <td width="33.33%" valign="top">
-      <a href="assets/works/the-machine-must-answer.png"><img src="assets/works/the-machine-must-answer.jpg" alt="The Machine Must Answer"></a><br>
-      <sub><strong>Figure 2.</strong> <em>The Machine Must Answer</em> (2026). Incense rises where a sanctuary and a server room occupy the same space.</sub>
+      <a href="assets/works/the-machine-must-answer.png"><img src="assets/works/the-machine-must-answer.jpg" alt="The Cloud Goes to Confession"></a><br>
+      <sub><strong>Figure 2.</strong> <em>The Cloud Goes to Confession</em> (2026). Incense rises where a sanctuary and a server room occupy the same space.</sub>
     </td>
     <td width="33.33%" valign="top">
       <a href="assets/works/ferrum-mapifolia.png"><img src="assets/works/ferrum-mapifolia.jpg" alt="Ferrum mapifolia"></a><br>
