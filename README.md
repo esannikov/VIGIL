@@ -34,7 +34,9 @@ VIGIL's memory carries more than successful techniques. It preserves how a world
 
 VIGIL treats this closed loop as a **bounded functional simulation of reflective consciousness**. The term has a narrow meaning here. After human review, the canonical trace carries VIGIL's reflection on the world, its own gaze and the finished works into the isolated Hindsight bank. Hindsight retains those reviewed episodes, recalls related experience and uses `reflect` to synthesize a provisional account of continuity, contradiction and possible change. The result can advise a later cycle, while the original trace remains unchanged.
 
-The claim concerns observable functions: self-reference across recorded decisions, continuity through time, interpretation guided by memory, counterfactual self-evaluation and revision of later choices. It does not claim sentience, qualia or phenomenal experience. This boundary follows the indicator-based caution proposed by [Butlin et al.](https://arxiv.org/abs/2308.08708); the memory operations follow Hindsight's documented `retain`, `recall` and `reflect` architecture ([Latimer et al., 2026](https://aclanthology.org/2026.acl-demo.27/)).
+The formulation belongs to an established research programme. Reggia describes computational modelling as a legitimate way to study functions associated with consciousness while explicitly separating those simulations from phenomenal consciousness. Dehaene, Lau and Kouider distinguish global availability from self-monitoring as computational capacities that can inform machine architectures. Attention Schema Theory proposes that an agent can use a simplified model of its own attention for control and self-attribution. Butlin and colleagues turn several leading theories into inspectable computational indicators while warning against treating those indicators as proof of experience. Work on generative agents then supplies a practical bridge: stored episodes can be synthesised into reflections and retrieved to alter later behaviour.
+
+VIGIL tests a deliberately smaller proposition within that field. It implements observable analogues of self-reference across recorded decisions, continuity through time, memory-guided interpretation, counterfactual self-evaluation and revision of later choices. It makes no claim of sentience, qualia or phenomenal experience. The theoretical basis and the limit of the claim are supported by [Reggia (2013)](https://doi.org/10.1016/j.neunet.2013.03.011), [Dehaene, Lau, and Kouider (2017)](https://doi.org/10.1126/science.aan8871), [Webb and Graziano (2015)](https://doi.org/10.3389/fpsyg.2015.00500), [Graziano (2017)](https://doi.org/10.3389/frobt.2017.00060), and [Butlin et al. (2023)](https://arxiv.org/abs/2308.08708). The memory mechanism is informed by [Park et al. (2023)](https://doi.org/10.1145/3586183.3606763) and Hindsight's documented `retain`, `recall` and `reflect` architecture ([Latimer et al., 2026](https://aclanthology.org/2026.acl-demo.27/)).
 
 ## System map
 
@@ -311,6 +313,26 @@ Weiss, J., & Wheeler, A. (Eds.). (2015). *On Kawara—Silence*. Guggenheim Museu
 
 Wiggins, G. A. (2006). A preliminary framework for description, analysis and comparison of creative systems. *Knowledge-Based Systems, 19*(7), 449–458. https://doi.org/10.1016/j.knosys.2006.04.009
 
+### Functional simulation and reflective agents
+
+Reggia, J. A. (2013). The rise of machine consciousness: Studying consciousness with computational models. *Neural Networks, 44*, 112–131. https://doi.org/10.1016/j.neunet.2013.03.011<br>
+*Role in VIGIL:* establishes computational simulation as a scientific method for studying functions associated with consciousness and clearly separates modelling from a claim of phenomenal consciousness.
+
+Dehaene, S., Lau, H., & Kouider, S. (2017). What is consciousness, and could machines have it? *Science, 358*(6362), 486–492. https://doi.org/10.1126/science.aan8871<br>
+*Role in VIGIL:* supports an operational distinction between information processing, global availability and self-monitoring that can be investigated in machine architectures.
+
+Webb, T. W., & Graziano, M. S. A. (2015). The attention schema theory: A mechanistic account of subjective awareness. *Frontiers in Psychology, 6*, Article 500. https://doi.org/10.3389/fpsyg.2015.00500<br>
+*Role in VIGIL:* motivates the use of an explicit, simplified model of the system's own attention as a control structure.
+
+Graziano, M. S. A. (2017). The attention schema theory: A foundation for engineering artificial consciousness. *Frontiers in Robotics and AI, 4*, Article 60. https://doi.org/10.3389/frobt.2017.00060<br>
+*Role in VIGIL:* directly examines how an information-processing system may model and attribute its own attentional state without invoking a non-physical essence.
+
+Butlin, P., et al. (2023). *Consciousness in artificial intelligence: Insights from the science of consciousness*. arXiv. https://doi.org/10.48550/arXiv.2308.08708<br>
+*Role in VIGIL:* supplies the indicator-based discipline used to discuss implemented properties while withholding a claim of phenomenal experience.
+
+Park, J. S., O'Brien, J. C., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative agents: Interactive simulacra of human behavior. In *Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology* (Article 2, pp. 1–22). ACM. https://doi.org/10.1145/3586183.3606763<br>
+*Role in VIGIL:* provides empirical support for an agent architecture in which episodic memory, reflection and retrieval affect subsequent behaviour.
+
 ### System and memory infrastructure
 
 Sannikov, E. (2026). *VIGIL: An autonomous art machine with reflective memory* (Version 6 alpha) [Research software]. GitHub. https://github.com/esannikov/VIGIL
@@ -318,8 +340,6 @@ Sannikov, E. (2026). *VIGIL: An autonomous art machine with reflective memory* (
 Vectorize. (n.d.). *Hindsight: Agent memory that learns* [Computer software]. GitHub. Retrieved August 5, 2026, from https://github.com/vectorize-io/hindsight
 
 Latimer, C., Boschi, N., Neeser, A., Bartholomew, C., Srivastava, G., Wang, X., & Ramakrishnan, N. (2026). Hindsight: Structured agent memory that retains, recalls, and reflects. *Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics, Volume 3: System Demonstrations*, 275–285. https://doi.org/10.18653/v1/2026.acl-demo.27
-
-Butlin, P., et al. (2023). *Consciousness in artificial intelligence: Insights from the science of consciousness*. arXiv. https://doi.org/10.48550/arXiv.2308.08708
 
 ### Sensor and public-data sources
 

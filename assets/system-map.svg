@@ -45,14 +45,15 @@
   <text x="35" y="825" class="groupLabel">ARTISTIC</text>
   <text x="55" y="854" class="groupLabel">CYCLE</text>
 
-  <path d="M185 1250 H165 V1500 H185" class="bracket"/>
+  <path d="M235 1250 H205 V1500 H235" class="bracket"/>
   <text x="35" y="1320" class="groupLabel">HUMAN</text>
   <text x="35" y="1348" class="groupLabel">REVIEW /</text>
   <text x="35" y="1376" class="groupLabel">CALIBRATION</text>
   <text x="35" y="1405" font-size="15" fill="#52605b">current research phase</text>
 
   <text x="880" y="474" class="groupLabel violetText">REFLECTIVE SELF-MODEL</text>
-  <text x="880" y="502" font-size="15" fill="#7650aa">bounded functional consciousness simulation</text>
+  <text x="1030" y="502" font-size="15" text-anchor="middle" fill="#7650aa">bounded functional simulation</text>
+  <text x="1030" y="522" font-size="15" text-anchor="middle" fill="#7650aa">of reflective consciousness</text>
 
   <!-- Main pipeline -->
   <g>
