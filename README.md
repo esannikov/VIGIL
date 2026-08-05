@@ -30,6 +30,12 @@ Human review currently serves the research, learning and calibration phase. The 
 
 VIGIL's memory carries more than successful techniques. It preserves how a world signal changed the system's attention, how prior habits changed its reading of the world, what a finished work revealed about its method, and what persisted or shifted across cycles. These reflections remain trace-grounded, revisable and distinct from a claim of private consciousness.
 
+### Reflective self-model
+
+VIGIL treats this closed loop as a **bounded functional simulation of reflective consciousness**. The term has a narrow meaning here. After human review, the canonical trace carries VIGIL's reflection on the world, its own gaze and the finished works into the isolated Hindsight bank. Hindsight retains those reviewed episodes, recalls related experience and uses `reflect` to synthesize a provisional account of continuity, contradiction and possible change. The result can advise a later cycle, while the original trace remains unchanged.
+
+The claim concerns observable functions: self-reference across recorded decisions, continuity through time, interpretation guided by memory, counterfactual self-evaluation and revision of later choices. It does not claim sentience, qualia or phenomenal experience. This boundary follows the indicator-based caution proposed by [Butlin et al.](https://arxiv.org/abs/2308.08708); the memory operations follow Hindsight's documented `retain`, `recall` and `reflect` architecture ([Latimer et al., 2026](https://aclanthology.org/2026.acl-demo.27/)).
+
 ## System map
 
 <p align="center">
@@ -37,7 +43,7 @@ VIGIL's memory carries more than successful techniques. It preserves how a world
     <img src="assets/system-map.png" width="820" alt="VIGIL autonomous art cycle with reflective memory">
   </a>
   <br>
-  <sub><strong>Figure 2.</strong> VIGIL v6 alpha system architecture. Runtime sequence, provenance trace, advisory memory and human governance are separated by color and arrow type. Tap or click the image to inspect it at full size.</sub>
+  <sub><strong>Figure 2.</strong> VIGIL v6 alpha system architecture. The canonical episode trace enters Hindsight after human review; reflective recall then advises a later artistic decision. Tap or click the image to inspect it at full size.</sub>
 </p>
 
 <p align="center"><a href="https://raw.githubusercontent.com/esannikov/VIGIL/main/assets/system-map.png">Open full-size PNG</a> · <a href="https://raw.githubusercontent.com/esannikov/VIGIL/main/assets/system-map.svg">Open scalable SVG</a></p>
@@ -56,8 +62,8 @@ The table documents the working prototype while implementation remains private. 
 | Visual translation | **Creative Sight** and **Prompt Director** through `vigil_creative_engine.py` | Converts each position into a scene, composition, material action and generation instruction | Five production scenes and prompts |
 | Image production | **Image gateway** | Generates all five works through GPT Image 2 under the recorded model policy | Five bound image artifacts |
 | Visual review | **Visual Critic** through `visual_critic.py` | Reads finished images before seeing their intended meaning, then performs an informed comparison | Artifact reviews and machine ranking |
-| Trace integrity | `trace_contract.py` and `vigil_creative_engine.py` | Binds sources, alternatives, prompts, files, hashes, critiques and human verdicts | Append-only generation trace |
-| Reflective memory | Artistic Reasoner, **Dream Reasoner** and Hindsight | Relates VIGIL's reflections on itself, the world and its works across reviewed traces | Candidate reflection, continuity question or future experiment |
+| Trace integrity | `trace_contract.py` and `vigil_creative_engine.py` | Binds sources, alternatives, prompts, files, hashes, critiques, structured self-reflection and human verdicts | Canonical append-only episode trace |
+| Reflective memory | Artistic Reasoner, **Dream Reasoner** and Hindsight | Retains reviewed experience and relates VIGIL's reflections on itself, the world and its works across time | Candidate reflective self-model, continuity question or future experiment |
 | Method learning | `trace_compiler.py`, event log and Hindsight | Detects repetition, records candidate discoveries and recalls only reviewed history | Candidate lesson, correction or human-approved method transfer |
 
 ## Why build it?
@@ -198,7 +204,7 @@ The Critic receives the same corpus with a different role. It checks whether the
 | Theory corpus | Versioned notes and source references behind the lenses above | Suggests an operation and a failure condition |
 | Trace archive | Concepts, prompts, images, hashes, blind readings, machine choices and human verdicts | Preserves what happened in a particular cycle |
 | Method bank | Candidate failures, discoveries, corrections and transferred procedures | Only reviewed and promoted methods may guide later runs automatically |
-| Hindsight bank | Associative synthesis across reviewed traces, entities, time, theory and VIGIL's reflections on itself, the world and its works | Recall and reflection only; it cannot establish facts or rewrite the audit trail |
+| Hindsight bank | Associative synthesis across reviewed traces, entities, time, theory and VIGIL's reflections on itself, the world and its works | Retain, recall and reflect over reviewed episodes; it cannot establish facts or rewrite the audit trail |
 
 ## World inputs
 
@@ -310,6 +316,10 @@ Wiggins, G. A. (2006). A preliminary framework for description, analysis and com
 Sannikov, E. (2026). *VIGIL: An autonomous art machine with reflective memory* (Version 6 alpha) [Research software]. GitHub. https://github.com/esannikov/VIGIL
 
 Vectorize. (n.d.). *Hindsight: Agent memory that learns* [Computer software]. GitHub. Retrieved August 5, 2026, from https://github.com/vectorize-io/hindsight
+
+Latimer, C., Boschi, N., Neeser, A., Bartholomew, C., Srivastava, G., Wang, X., & Ramakrishnan, N. (2026). Hindsight: Structured agent memory that retains, recalls, and reflects. *Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics, Volume 3: System Demonstrations*, 275–285. https://doi.org/10.18653/v1/2026.acl-demo.27
+
+Butlin, P., et al. (2023). *Consciousness in artificial intelligence: Insights from the science of consciousness*. arXiv. https://doi.org/10.48550/arXiv.2308.08708
 
 ### Sensor and public-data sources
 
