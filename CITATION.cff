@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use VIGIL in research, please cite this repository."
-title: "VIGIL: An Autonomous Art Machine for Reading the World"
+title: "VIGIL: An Autonomous Art Machine with Reflective Memory"
 type: software
 authors:
   - family-names: Sannikov
@@ -11,10 +11,9 @@ url: "https://github.com/esannikov/VIGIL"
 version: "0.1.0-research-preview"
 date-released: "2026-08-05"
 abstract: >-
-  VIGIL is a trace-governed autonomous art machine that reads public world
-  signals, develops five visual positions, generates images, critiques the
-  resulting pixels, selects one work before human feedback, and learns through
-  artifact-bound review and controlled memory.
+  VIGIL is an autonomous art machine that reads public world signals, makes
+  and critiques visual decisions, selects one image before human feedback,
+  and develops its artistic method through artifact-bound reflective memory.
 keywords:
   - computational creativity
   - autonomous art

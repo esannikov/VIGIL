@@ -1,12 +1,12 @@
 # VIGIL
 
-## An autonomous art machine for reading the world
+## An autonomous art machine with reflective memory
 
 **Research preview · v6 alpha · code coming soon**
 
 VIGIL reads a day before it makes an image. Each evening it gathers public signals about conflict, climate, health, infrastructure, technology, markets and human attention. It chooses one tension, develops five visual positions, generates five images, examines the pixels and selects one work before receiving human feedback.
 
-The project asks a practical question: **can a machine develop an artistic method when its sources, alternatives, failures and revisions remain visible?**
+The project asks a practical question: **can a machine make autonomous creative decisions, reflect on them and develop an artistic method through memory?**
 
 VIGIL is a living experiment within Eugene Sannikov's PhD research on AI in Art at the National Academy of Fine Arts and Architecture in Kyiv.
 
@@ -303,7 +303,7 @@ Wiggins, G. A. (2006). A preliminary framework for description, analysis and com
 
 IBM. (n.d.). *Carbon Design System*. Retrieved August 5, 2026, from https://carbondesignsystem.com/
 
-Sannikov, E. (2026). *VIGIL: An autonomous art machine for reading the world* (Version 6 alpha) [Research software]. GitHub. https://github.com/esannikov/VIGIL
+Sannikov, E. (2026). *VIGIL: An autonomous art machine with reflective memory* (Version 6 alpha) [Research software]. GitHub. https://github.com/esannikov/VIGIL
 
 Vectorize. (n.d.). *Hindsight: Agent memory that learns* [Computer software]. GitHub. Retrieved August 5, 2026, from https://github.com/vectorize-io/hindsight
 
