@@ -62,6 +62,71 @@ VIGIL turns that hidden interval into research material. Every public claim has 
 
 This makes the project useful for studying creativity without reducing it to a single score. The object of study is the path between evidence, association, form, judgment and revision.
 
+## What is actually formalized
+
+VIGIL uses mathematics where the runtime performs a measurable operation. It does not calculate artistic value or derive the winning image from a weighted score.
+
+### Runtime coverage
+
+For each run, the system reports the share of registered sensors that the current runtime can query:
+
+$$
+C_{run}=\frac{N_{queryable}}{N_{registered}}
+$$
+
+The 5 August 2026 snapshot gives $C_{run}=13/20=0.65$. This number describes technical availability. It says nothing about the truth, independence or moral importance of the returned records. To prevent a prolific source from dominating by volume, the reasoning view retains at most eight records from any one sensor:
+
+$$
+n'_s=\min(n_s,8)
+$$
+
+### Argument, rather than automatic ranking
+
+For every signal it retains, the World Reader records six bounded judgments:
+
+$$
+x_i=(e_i,\Delta_i,c_i,r_i,d_i,a_i)\in\{0,1,2,3,4\}^{6}
+$$
+
+They describe evidence strength, change, consequence, systemic reach, duration and an attention gap. The vector makes an argument inspectable; its coordinates are assigned by the agent and are not added into a hidden importance score. The World Reader must still state why a signal matters now, where the claim ends and what counter-reading remains possible.
+
+### Pixel criticism and selection
+
+After generation, the Visual Critic records a fourteen-coordinate diagnostic description for each artifact:
+
+$$
+q_j\in[0,10]^{14}
+$$
+
+The coordinates include first reading, composition, formal necessity, ambiguity, source relation, ethical attention, affect and originality. `overall` is a separate holistic judgment, not their mean. VIGIL then compares the five actual images and commits to one through an agent judgment:
+
+$$
+\hat{j}=A\big(\{I_j,q_j,b_j,k_j\}_{j=1}^{5}\big)
+$$
+
+Here $I_j$ is the image, $b_j$ its blind reading, $k_j$ its source-and-concept context, and $A$ denotes the recorded model decision. This notation names the inputs; it does not pretend that the decision has a closed numerical solution.
+
+### Learning gate
+
+A candidate belief can be revised only when one exact artifact has a pixel-aware review, an accepted human verdict, an artifact-scoped learning proposal and a critic score at or above the current threshold of 7:
+
+$$
+P(a)=\mathbf{1}[R_a\land H_a\land D_a\land s_a\geq7]
+$$
+
+When the gate passes, confidence is damped toward the new evidence with $\alpha=0.25$:
+
+$$
+b_{t+1}=\operatorname{clip}\big((1-\alpha)b_t+\alpha e_t,0,1\big),
+\qquad e_t=s_a/10
+$$
+
+The update changes confidence in a named working hypothesis. It does not prove that an image is good, that a method generalizes or that the machine has learned creativity. A belief remains a hypothesis until it has support from three distinct trace sources; durable procedural rules remain subject to human review and transfer testing.
+
+The current use of exactly five candidates and the pre-render clarity gate belongs to the v6 alpha study design. Five gives a comparable choice set; the clarity gate tests whether a proposed central relation survives without explanatory prose. Neither is presented as a universal theory of art.
+
+The same gate creates a known methodological pressure. The current concept schema asks every candidate to expose a subject, an action, a consequence and a target-source metaphor. This improved message recovery after earlier images became opaque, but it also favors causal visual riddles over indexical, durational, atmospheric, serial or nonrepresentational work. The 30-evening protocol keeps the constraint stable for comparison and renders selected rejected concepts on control days. A proposed later studio mode would let VIGIL choose the work's logic while code continues to protect evidence, identity and trace integrity.
+
 ## A decision trace: *The Crossing Leads Back*
 
 The source packet concerned a mass crossing into Ceuta followed by the return of most migrants to Morocco. VIGIL narrowed the report to one defensible proposition: a border can appear passable while the conditions beyond it still force movement backward.
@@ -158,6 +223,8 @@ An instrumental record may support a bounded event claim. An attention signal sh
 VIGIL is an operational alpha prototype. The complete cycle works: sensing, artistic reasoning, image generation, pixel-aware criticism, machine selection, human review and trace-bound memory. The present research phase tests whether memory improves later decisions while preserving formal variety.
 
 A planned 30-evening study compares runs with and without reviewed memory on matched evidence packets. The primary measure is whether independent readers can recover the intended subject, action and consequence from the image. Formal diversity, dependence on captions, selection regret and machine-human disagreement remain separate outcomes.
+
+Two planned outcome measures are intentionally simple. Message recovery is the share of works for which an independent reader identifies the intended subject, action and consequence. Selection agreement is the share of cycles in which the machine and human choose the same work. These measures have not yet produced study results; the repository reports no effect size or claim of improvement.
 
 ## Code coming soon
 
