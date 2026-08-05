@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">VIGIL bounded nightly cycle</title>
+  <desc id="desc">A Carbon-inspired diagram showing world signals becoming an evidence packet, a daily tension, five artistic positions, generated images, pixel critique and a machine choice. Hindsight advises the artistic reasoner. Human review controls publication and durable learning.</desc>
+  <defs>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f62fe"/>
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8d8d8d"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#42be65"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#be95ff"/>
+    </marker>
+    <style>
+      .bg { fill: #161616; }
+      .layer { fill: #262626; stroke: #525252; stroke-width: 1; }
+      .layer-blue { fill: #262626; stroke: #0f62fe; stroke-width: 2; }
+      .layer-green { fill: #262626; stroke: #42be65; stroke-width: 2; }
+      .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; fill: #78a9ff; letter-spacing: 1.2px; }
+      .title { font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 48px; font-weight: 300; fill: #f4f4f4; }
+      .subtitle { font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 18px; font-weight: 400; fill: #c6c6c6; }
+      .number { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; fill: #78a9ff; }
+      .number-green { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; fill: #6fdc8c; }
+      .box-title { font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 19px; font-weight: 600; fill: #f4f4f4; }
+      .box-copy { font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 14px; font-weight: 400; fill: #c6c6c6; }
+      .band-title { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600; fill: #a8a8a8; letter-spacing: .8px; }
+      .label-blue { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; fill: #78a9ff; }
+      .label-purple { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; fill: #be95ff; }
+      .label-green { font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; fill: #6fdc8c; }
+      .flow-blue { fill: none; stroke: #0f62fe; stroke-width: 3; marker-end: url(#arrow-blue); }
+      .flow-gray { fill: none; stroke: #8d8d8d; stroke-width: 2; marker-end: url(#arrow-gray); }
+      .flow-dashed { fill: none; stroke: #be95ff; stroke-width: 2; stroke-dasharray: 8 7; marker-end: url(#arrow-purple); }
+      .flow-green { fill: none; stroke: #42be65; stroke-width: 3; marker-end: url(#arrow-green); }
+      .rule { stroke: #393939; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000"/>
+  <rect x="0" y="0" width="16" height="1000" fill="#0f62fe"/>
+
+  <text class="eyebrow" x="64" y="58">VIGIL / SYSTEM MAP / V6 ALPHA</text>
+  <text class="title" x="64" y="116">A bounded nightly act of seeing</text>
+  <text class="subtitle" x="64" y="153">Evidence enters first. Memory advises later. The machine chooses before the human verdict.</text>
+  <line class="rule" x1="64" y1="184" x2="1536" y2="184"/>
+
+  <text class="band-title" x="64" y="220">01 · WORLD READING</text>
+
+  <g transform="translate(64 242)">
+    <rect class="layer-blue" width="254" height="124"/>
+    <rect width="6" height="124" fill="#0f62fe"/>
+    <text class="number" x="24" y="30">01</text>
+    <text class="box-title" x="24" y="60">World signals</text>
+    <text class="box-copy" x="24" y="86">Events · attention ·</text>
+    <text class="box-copy" x="24" y="106">slow planetary context</text>
+  </g>
+
+  <g transform="translate(378 242)">
+    <rect class="layer-blue" width="254" height="124"/>
+    <rect width="6" height="124" fill="#0f62fe"/>
+    <text class="number" x="24" y="30">02</text>
+    <text class="box-title" x="24" y="60">Evidence packet</text>
+    <text class="box-copy" x="24" y="86">Source boundary · caveat ·</text>
+    <text class="box-copy" x="24" y="106">counter-reading</text>
+  </g>
+
+  <g transform="translate(692 242)">
+    <rect class="layer-blue" width="254" height="124"/>
+    <rect width="6" height="124" fill="#0f62fe"/>
+    <text class="number" x="24" y="30">03</text>
+    <text class="box-title" x="24" y="60">World reader</text>
+    <text class="box-copy" x="24" y="86">Selects one tension or</text>
+    <text class="box-copy" x="24" y="106">records a refusal</text>
+  </g>
+
+  <g transform="translate(1006 242)">
+    <rect class="layer-blue" width="254" height="124"/>
+    <rect width="6" height="124" fill="#0f62fe"/>
+    <text class="number" x="24" y="30">04</text>
+    <text class="box-title" x="24" y="60">Daily tension</text>
+    <text class="box-copy" x="24" y="86">One public claim with a</text>
+    <text class="box-copy" x="24" y="106">visible factual limit</text>
+  </g>
+
+  <path class="flow-blue" d="M318 304 H370"/>
+  <path class="flow-blue" d="M632 304 H684"/>
+  <path class="flow-blue" d="M946 304 H998"/>
+
+  <text class="band-title" x="64" y="440">02 · ARTISTIC WORKSHOP</text>
+
+  <g transform="translate(64 462)">
+    <rect class="layer-blue" width="254" height="132"/>
+    <rect width="6" height="132" fill="#0f62fe"/>
+    <text class="number" x="24" y="30">05</text>
+    <text class="box-title" x="24" y="60">Artistic reasoner</text>
+    <text class="box-copy" x="24" y="86">Position · metaphor ·</text>
+    <text class="box-copy" x="24" y="106">material action</text>
+  </g>
+
+  <g transform="translate(378 462)">
+    <rect class="layer-blue" width="254" height="132"/>
+    <rect width="6" height="132" fill="#0f62fe"/>
+    <text class="number" x="24" y="30">06</text>
+    <text class="box-title" x="24" y="60">Five positions</text>
+    <text class="box-copy" x="24" y="86">Different viewpoints, forms</text>
+    <text class="box-copy" x="24" y="106">and message contracts</text>
+  </g>
+
+  <g transform="translate(692 462)">
+    <rect class="layer-blue" width="254" height="132"/>
+    <rect width="6" height="132" fill="#0f62fe"/>
+    <text class="number" x="24" y="30">07</text>
+    <text class="box-title" x="24" y="60">Image generation</text>
+    <text class="box-copy" x="24" y="86">Five autonomous renders</text>
+    <text class="box-copy" x="24" y="106">through GPT Image 2</text>
+  </g>
+
+  <g transform="translate(1006 462)">
+    <rect class="layer-blue" width="254" height="132"/>
+    <rect width="6" height="132" fill="#0f62fe"/>
+    <text class="number" x="24" y="30">08</text>
+    <text class="box-title" x="24" y="60">Pixel critic</text>
+    <text class="box-copy" x="24" y="86">Blind read · informed read ·</text>
+    <text class="box-copy" x="24" y="106">comparative selection</text>
+  </g>
+
+  <g transform="translate(1320 462)">
+    <rect class="layer-blue" width="216" height="132"/>
+    <rect width="6" height="132" fill="#0f62fe"/>
+    <text class="number" x="24" y="30">09</text>
+    <text class="box-title" x="24" y="60">Machine choice</text>
+    <text class="box-copy" x="24" y="86">One work fixed before</text>
+    <text class="box-copy" x="24" y="106">human feedback</text>
+  </g>
+
+  <path class="flow-blue" d="M1133 366 V414 H191 V454"/>
+  <text class="label-blue" x="1150" y="407">CURRENT EVENT ENTERS FIRST</text>
+  <path class="flow-blue" d="M318 528 H370"/>
+  <path class="flow-blue" d="M632 528 H684"/>
+  <path class="flow-blue" d="M946 528 H998"/>
+  <path class="flow-blue" d="M1260 528 H1312"/>
+
+  <text class="band-title" x="64" y="680">03 · MEMORY, TRACE AND HUMAN AUTHORITY</text>
+
+  <g transform="translate(64 710)">
+    <rect class="layer" width="300" height="142"/>
+    <text class="number" x="24" y="30">M1</text>
+    <text class="box-title" x="24" y="60">Hindsight recall</text>
+    <text class="box-copy" x="24" y="86">Reviewed history, theory,</text>
+    <text class="box-copy" x="24" y="106">failures and resonances</text>
+    <text class="box-copy" x="24" y="126">Advisory only</text>
+  </g>
+
+  <g transform="translate(424 710)">
+    <rect class="layer" width="300" height="142"/>
+    <text class="number" x="24" y="30">M2</text>
+    <text class="box-title" x="24" y="60">Append-only trace</text>
+    <text class="box-copy" x="24" y="86">Sources · alternatives ·</text>
+    <text class="box-copy" x="24" y="106">pixels · critique · choice</text>
+    <text class="box-copy" x="24" y="126">History remains visible</text>
+  </g>
+
+  <g transform="translate(784 710)">
+    <rect class="layer-green" width="300" height="142"/>
+    <rect width="6" height="142" fill="#42be65"/>
+    <text class="number-green" x="24" y="30">H1</text>
+    <text class="box-title" x="24" y="60">Human verdict</text>
+    <text class="box-copy" x="24" y="86">Accept · reject · correct ·</text>
+    <text class="box-copy" x="24" y="106">preserve disagreement</text>
+  </g>
+
+  <g transform="translate(1144 710)">
+    <rect class="layer-green" width="392" height="142"/>
+    <rect width="6" height="142" fill="#42be65"/>
+    <text class="number-green" x="24" y="30">H2</text>
+    <text class="box-title" x="24" y="60">Publish or promote</text>
+    <text class="box-copy" x="24" y="86">Publication stays human-led.</text>
+    <text class="box-copy" x="24" y="106">Methods enter durable memory</text>
+    <text class="box-copy" x="24" y="126">after verified transfer.</text>
+  </g>
+
+  <path class="flow-dashed" d="M364 710 H400 V620 H300 V602"/>
+  <text x="420" y="650" class="label-purple">ADVISORY RECALL</text>
+  <path class="flow-gray" d="M1428 594 V660 H574 V702"/>
+  <text class="band-title" x="1110" y="650">CHOICE WRITES TO TRACE</text>
+  <path class="flow-green" d="M724 781 H776"/>
+  <path class="flow-green" d="M1084 781 H1136"/>
+  <path class="flow-green" d="M1340 852 V920 H214 V860"/>
+  <text class="label-green" x="520" y="940">HUMAN-APPROVED TRANSFER MAY RETURN AS FUTURE MEMORY</text>
+
+  <text class="box-copy" x="64" y="978">Carbon-inspired research diagram · Gray 100 theme · IBM Plex hierarchy · direct labels · 8-point spacing rhythm</text>
+</svg>
