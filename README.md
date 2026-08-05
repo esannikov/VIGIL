@@ -22,11 +22,13 @@ VIGIL is a living experiment within Eugene Sannikov's PhD research on AI in Art 
 2. **Choose.** Form one bounded statement about the day's tension.
 3. **Position.** Develop five materially different artistic responses.
 4. **Generate.** Create five images autonomously through an API gateway to GPT Image 2.
-5. **Critique.** Read the finished pixels before reopening the intended meaning.
+5. **Critique.** Read the finished images before reopening the intended meaning.
 6. **Select.** Rank the set and choose one work before the human verdict is known.
-7. **Learn.** Preserve disagreement, failure and accepted corrections in an append-only memory.
+7. **Reflect and learn.** Relate the world, the finished works and VIGIL's changing method through reviewed memory.
 
-Human authority remains explicit. The researcher controls publication and the promotion of a local discovery into a durable method. Autonomy describes the bounded interval in which VIGIL moves from evidence to its own selection.
+Human review currently serves the research, learning and calibration phase. The researcher controls publication and the promotion of a local discovery into a durable method. Autonomy describes the bounded interval in which VIGIL moves from evidence to its own selection.
+
+VIGIL's memory carries more than successful techniques. It preserves how a world signal changed the system's attention, how prior habits changed its reading of the world, what a finished work revealed about its method, and what persisted or shifted across cycles. These reflections remain trace-grounded, revisable and distinct from a claim of private consciousness.
 
 ## System map
 
@@ -38,6 +40,8 @@ Human authority remains explicit. The researcher controls publication and the pr
   <sub><strong>Figure 2.</strong> VIGIL v6 alpha system architecture. Runtime sequence, provenance trace, advisory memory and human governance are separated by color and arrow type. Tap or click the image to inspect it at full size.</sub>
 </p>
 
+<p align="center"><a href="https://raw.githubusercontent.com/esannikov/VIGIL/main/assets/system-map.png">Open full-size PNG</a> · <a href="https://raw.githubusercontent.com/esannikov/VIGIL/main/assets/system-map.svg">Open scalable SVG</a></p>
+
 ### Current modules
 
 The table documents the working prototype while implementation remains private. Agent names describe decision roles; script names identify the runtime surfaces planned for the later code release.
@@ -48,13 +52,13 @@ The table documents the working prototype while implementation remains private. 
 | World interpretation | **World Reader** through `vigil_reasoning.py` | Reads the current packet independently, selects one tension and states its factual boundary or refusal | World read with counter-reading and cited signal IDs |
 | Associative recall | **Hindsight Recall** through `vigil_reasoning.py` | Retrieves reviewed traces, failures and theory only after the current event has been framed | Advisory recall; no factual or procedural authority |
 | Artistic reasoning | **Artistic Reasoner** through `vigil_reasoning.py` | Chooses a theoretical mode and develops five distinct positions with explicit message designs | Five concepts with subject, action, consequence and uncertainty |
-| Pre-render review | **Studio / Concept Critic** through `vigil_reasoning.py` | Compares concepts pairwise and checks whether the visible mechanism can survive without explanatory prose | Comparative review and a narrow clarity gate |
+| Pre-render review | **Concept Critic** through `vigil_reasoning.py` | Compares written concept descriptions before any image is generated and checks whether the proposed mechanism can survive without explanatory prose | Comparative review and a narrow clarity gate |
 | Visual translation | **Creative Sight** and **Prompt Director** through `vigil_creative_engine.py` | Converts each position into a scene, composition, material action and generation instruction | Five production scenes and prompts |
 | Image production | **Image gateway** | Generates all five works through GPT Image 2 under the recorded model policy | Five bound image artifacts |
-| Pixel review | **Visual Critic** through `visual_critic.py` | Performs a blind reading, then an informed reading, and compares the set | Artifact reviews and machine ranking |
+| Visual review | **Visual Critic** through `visual_critic.py` | Reads finished images before seeing their intended meaning, then performs an informed comparison | Artifact reviews and machine ranking |
 | Trace integrity | `trace_contract.py` and `vigil_creative_engine.py` | Binds sources, alternatives, prompts, files, hashes, critiques and human verdicts | Append-only generation trace |
+| Reflective memory | Artistic Reasoner, **Dream Reasoner** and Hindsight | Relates VIGIL's reflections on itself, the world and its works across reviewed traces | Candidate reflection, continuity question or future experiment |
 | Method learning | `trace_compiler.py`, event log and Hindsight | Detects repetition, records candidate discoveries and recalls only reviewed history | Candidate lesson, correction or human-approved method transfer |
-| Slow reflection | **Dream Reasoner** through `vigil_reasoning.py` | Searches recent traces for unresolved relations and future experiments | Candidate-only dream; active rules remain unchanged |
 
 ## Why build it?
 
@@ -194,7 +198,7 @@ The Critic receives the same corpus with a different role. It checks whether the
 | Theory corpus | Versioned notes and source references behind the lenses above | Suggests an operation and a failure condition |
 | Trace archive | Concepts, prompts, images, hashes, blind readings, machine choices and human verdicts | Preserves what happened in a particular cycle |
 | Method bank | Candidate failures, discoveries, corrections and transferred procedures | Only reviewed and promoted methods may guide later runs automatically |
-| Hindsight bank | Associative synthesis across reviewed traces, entities, time and theory | Recall and reflection only; it cannot establish facts or rewrite the audit trail |
+| Hindsight bank | Associative synthesis across reviewed traces, entities, time, theory and VIGIL's reflections on itself, the world and its works | Recall and reflection only; it cannot establish facts or rewrite the audit trail |
 
 ## World inputs
 
@@ -227,7 +231,7 @@ An instrumental record may support a bounded event claim. An attention signal sh
 
 ## Research status
 
-VIGIL is an operational alpha prototype. The complete cycle works: sensing, artistic reasoning, image generation, pixel-aware criticism, machine selection, human review and trace-bound memory. The present research phase tests whether memory improves later decisions while preserving formal variety.
+VIGIL is an operational alpha prototype. The complete cycle works: sensing, artistic reasoning, image generation, visual criticism, machine selection, human calibration and trace-bound memory. The present research phase tests whether reviewed memory improves later decisions while preserving formal variety and supporting a coherent, revisable artistic identity.
 
 A planned 30-evening study compares runs with and without reviewed memory on matched evidence packets. The primary measure is whether independent readers can recover the intended subject, action and consequence from the image. Formal diversity, dependence on captions, selection regret and machine-human disagreement remain separate outcomes.
 
