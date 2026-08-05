@@ -64,33 +64,34 @@ This makes the project useful for studying creativity without reducing it to a s
 
 ## What is actually formalized
 
-VIGIL uses mathematics where the runtime performs a measurable operation. It does not calculate artistic value or derive the winning image from a weighted score.
+VIGIL uses two kinds of formalization. **Runtime computations** are arithmetic operations executed by Python. The **formal decision model** describes the variables available to an agent and the structure of its judgment without pretending that interpretation is a numerical optimizer. VIGIL does not calculate artistic value or derive the winning image from a weighted score.
 
-### Runtime coverage
+### Runtime computations: coverage and balance
 
-For each run, the system reports the share of registered sensors that the current runtime can query:
+For each run, the system returns the number of registered sensors and the number the current runtime can query. Their reported ratio is:
 
 $$
 C_{run}=\frac{N_{queryable}}{N_{registered}}
 $$
 
-The 5 August 2026 snapshot gives $C_{run}=13/20=0.65$. This number describes technical availability. It says nothing about the truth, independence or moral importance of the returned records. To prevent a prolific source from dominating by volume, the reasoning view retains at most eight records from any one sensor:
+The 5 August 2026 snapshot gives $C_{run}=13/20=0.65$. Python produces both counts; the ratio is derived in the report. It describes technical availability and says nothing about the truth, independence or moral importance of the returned records. The following cap is executed directly. To prevent a prolific source from dominating by volume, the reasoning view retains at most eight records from any one sensor:
 
 $$
 n'_s=\min(n_s,8)
 $$
 
-### Argument, rather than automatic ranking
+### Formal decision model: World Reader
 
 For every signal it retains, the World Reader records six bounded judgments:
 
 $$
-x_i=(e_i,\Delta_i,c_i,r_i,d_i,a_i)\in\{0,1,2,3,4\}^{6}
+x_i=(e_i,\Delta_i,c_i,r_i,d_i,a_i),
+\qquad 0\leq x_{i,m}\leq4
 $$
 
-They describe evidence strength, change, consequence, systemic reach, duration and an attention gap. The vector makes an argument inspectable; its coordinates are assigned by the agent and are not added into a hidden importance score. The World Reader must still state why a signal matters now, where the claim ends and what counter-reading remains possible.
+They describe evidence strength, change, consequence, systemic reach, duration and an attention gap. This is a mathematical model of the agent's input and judgment surface. The agent assigns the coordinates under a validated schema; Python checks their range and provenance but does not calculate them or add them into a hidden importance score. The World Reader must still state why a signal matters now, where the claim ends and what counter-reading remains possible.
 
-### Pixel criticism and selection
+### Formal decision model: criticism and selection
 
 After generation, the Visual Critic records a fourteen-coordinate diagnostic description for each artifact:
 
@@ -98,34 +99,38 @@ $$
 q_j\in[0,10]^{14}
 $$
 
-The coordinates include first reading, composition, formal necessity, ambiguity, source relation, ethical attention, affect and originality. `overall` is a separate holistic judgment, not their mean. VIGIL then compares the five actual images and commits to one through an agent judgment:
+The coordinates include first reading, composition, formal necessity, ambiguity, source relation, ethical attention, affect and originality. They are model judgments constrained to the interval by schema, not measurements calculated from pixels. `overall` is a separate holistic judgment, not their mean. VIGIL then compares the five actual images and commits to one through an agent judgment:
 
 $$
-\hat{j}=A\big(\{I_j,q_j,b_j,k_j\}_{j=1}^{5}\big)
+\hat{j}=A\big((I_j,q_j,b_j,k_j)_{j=1}^{5}\big)
 $$
 
-Here $I_j$ is the image, $b_j$ its blind reading, $k_j$ its source-and-concept context, and $A$ denotes the recorded model decision. This notation names the inputs; it does not pretend that the decision has a closed numerical solution.
+Here $I_j$ is the image, $b_j$ its blind reading, $k_j$ its source-and-concept context, and $A$ denotes the recorded agent decision. The expression is a formal model of the decision path. It names the evidence available to the agent and does not claim a closed numerical solution.
 
-### Learning gate
+### Runtime computation: learning gate
 
 A candidate belief can be revised only when one exact artifact has a pixel-aware review, an accepted human verdict, an artifact-scoped learning proposal and a critic score at or above the current threshold of 7:
 
 $$
-P(a)=\mathbf{1}[R_a\land H_a\land D_a\land s_a\geq7]
+P(a)=1\Longleftrightarrow R_a\land H_a\land D_a\land(s_a\geq7)
 $$
+
+$R_a$ denotes an attached pixel-aware review, $H_a$ an accepted artifact-bound human verdict and $D_a$ an artifact-scoped learning proposal.
 
 When the gate passes, confidence is damped toward the new evidence with $\alpha=0.25$:
 
 $$
-b_{t+1}=\operatorname{clip}\big((1-\alpha)b_t+\alpha e_t,0,1\big),
+b_{t+1}=\min\left(1,\max\left(0,(1-\alpha)b_t+\alpha e_t\right)\right),
 \qquad e_t=s_a/10
 $$
 
-The update changes confidence in a named working hypothesis. It does not prove that an image is good, that a method generalizes or that the machine has learned creativity. A belief remains a hypothesis until it has support from three distinct trace sources; durable procedural rules remain subject to human review and transfer testing.
+This formula is implemented in the runtime and the result is rounded to three decimal places. The update changes confidence in a named working hypothesis. It does not prove that an image is good, that a method generalizes or that the machine has learned creativity. A belief remains a hypothesis until it has support from three distinct trace sources; durable procedural rules remain subject to human review and transfer testing.
 
 The current use of exactly five candidates and the pre-render clarity gate belongs to the v6 alpha study design. Five gives a comparable choice set; the clarity gate tests whether a proposed central relation survives without explanatory prose. Neither is presented as a universal theory of art.
 
 The same gate creates a known methodological pressure. The current concept schema asks every candidate to expose a subject, an action, a consequence and a target-source metaphor. This improved message recovery after earlier images became opaque, but it also favors causal visual riddles over indexical, durational, atmospheric, serial or nonrepresentational work. The 30-evening protocol keeps the constraint stable for comparison and renders selected rejected concepts on control days. A proposed later studio mode would let VIGIL choose the work's logic while code continues to protect evidence, identity and trace integrity.
+
+The active runtime contains no lexical or Jaccard novelty score. Repetition is retained as trace evidence and may be discussed by the agent or reported as an attractor; it cannot reject a concept through word overlap.
 
 ## A decision trace: *The Crossing Leads Back*
 
