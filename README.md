@@ -31,11 +31,11 @@ Human authority remains explicit. The researcher controls publication and the pr
 ## System map
 
 <p align="center">
-  <a href="assets/system-map.png">
+  <a href="assets/system-map.svg">
     <img src="assets/system-map.png" width="820" alt="VIGIL autonomous art cycle with reflective memory">
   </a>
   <br>
-  <sub><strong>Figure 2.</strong> Current VIGIL v6 alpha architecture. Blue marks the autonomous cycle, violet marks reflective memory and trace, and green marks human authority. Tap or click the image to inspect it at full size.</sub>
+  <sub><strong>Figure 2.</strong> VIGIL v6 alpha system architecture. Runtime sequence, provenance trace, advisory memory and human governance are separated by color and arrow type. Tap or click the image to inspect it at full size.</sub>
 </p>
 
 ### Current modules

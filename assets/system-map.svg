@@ -1,193 +1,224 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1900" viewBox="0 0 1400 1900" role="img" aria-labelledby="title desc">
-  <title id="title">VIGIL autonomous art cycle with reflective memory</title>
-  <desc id="desc">A vertical map of VIGIL. World signals become a daily tension, five artistic positions and five generated images. VIGIL reads the pixels and chooses one work before human feedback. Reviewed traces return later through reflective memory. Human authority controls publication and durable method promotion.</desc>
+  <title id="title">VIGIL system architecture, version 6 alpha</title>
+  <desc id="desc">Technical architecture of VIGIL showing world sensing, artistic reasoning, image generation, criticism, machine selection, append-only trace, Hindsight memory, human verdict, and method promotion.</desc>
 
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#050713"/>
-      <stop offset="0.48" stop-color="#0a1025"/>
-      <stop offset="1" stop-color="#101b31"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070a11"/>
+      <stop offset="0.56" stop-color="#0a101b"/>
+      <stop offset="1" stop-color="#0b1321"/>
     </linearGradient>
-    <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#17213d" stop-opacity="0.94"/>
-      <stop offset="1" stop-color="#10182e" stop-opacity="0.9"/>
-    </linearGradient>
-    <linearGradient id="surfaceViolet" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#291d52" stop-opacity="0.94"/>
-      <stop offset="1" stop-color="#15172f" stop-opacity="0.92"/>
-    </linearGradient>
-    <linearGradient id="surfaceGreen" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#123d3b" stop-opacity="0.96"/>
-      <stop offset="1" stop-color="#102527" stop-opacity="0.94"/>
-    </linearGradient>
-    <linearGradient id="lineBlue" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#49d6ff"/>
-      <stop offset="1" stop-color="#696cff"/>
-    </linearGradient>
-    <linearGradient id="lineViolet" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#c47cff"/>
-      <stop offset="1" stop-color="#7868ff"/>
-    </linearGradient>
-    <linearGradient id="lineGreen" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#58e6b5"/>
-      <stop offset="1" stop-color="#39bfa4"/>
-    </linearGradient>
-    <radialGradient id="field" cx="50%" cy="30%" r="78%">
-      <stop offset="0" stop-color="#334a9d" stop-opacity="0.26"/>
-      <stop offset="0.48" stop-color="#542b88" stop-opacity="0.1"/>
-      <stop offset="1" stop-color="#050713" stop-opacity="0"/>
+    <radialGradient id="field" cx="56%" cy="38%" r="72%">
+      <stop offset="0" stop-color="#153e62" stop-opacity="0.18"/>
+      <stop offset="0.62" stop-color="#291d52" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#070a11" stop-opacity="0"/>
     </radialGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#50d7ee"/>
+      <stop offset="1" stop-color="#5296ff"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b176ef"/>
+      <stop offset="1" stop-color="#795eff"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#48dca3"/>
+      <stop offset="1" stop-color="#58bf7b"/>
+    </linearGradient>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#58c4f5"/>
+    </marker>
+    <marker id="arrowViolet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#9a6cf4"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#50cf91"/>
+    </marker>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
-      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.34"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000" flood-opacity="0.28"/>
     </filter>
-    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#5fbfff"/>
-    </marker>
-    <marker id="arrowViolet" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#a77cff"/>
-    </marker>
-    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 Z" fill="#51d7b0"/>
-    </marker>
     <style>
-      .title { font: 700 72px Arial, sans-serif; fill: #f7f8ff; letter-spacing: 0; }
-      .subtitle { font: 400 27px Arial, sans-serif; fill: #bfc9e8; }
-      .eyebrow { font: 700 18px Arial, sans-serif; fill: #76d5ff; letter-spacing: 3px; }
-      .section { font: 700 18px Arial, sans-serif; fill: #8392bd; letter-spacing: 2.5px; }
-      .step { font: 700 18px Arial, sans-serif; fill: #7fdcff; letter-spacing: 1.5px; }
-      .stepViolet { font: 700 18px Arial, sans-serif; fill: #c7a2ff; letter-spacing: 1.5px; }
-      .stepGreen { font: 700 18px Arial, sans-serif; fill: #7ce7c6; letter-spacing: 1.5px; }
-      .cardTitle { font: 700 34px Arial, sans-serif; fill: #ffffff; }
-      .cardCopy { font: 400 22px Arial, sans-serif; fill: #c9d2ec; }
-      .sideTitle { font: 700 28px Arial, sans-serif; fill: #ffffff; }
-      .sideCopy { font: 400 20px Arial, sans-serif; fill: #c8cee7; }
-      .flowLabel { font: 700 16px Arial, sans-serif; fill: #8aa6e8; letter-spacing: 1.5px; }
-      .flowLabelViolet { font: 700 16px Arial, sans-serif; fill: #c3a1ff; letter-spacing: 1.5px; }
-      .flowLabelGreen { font: 700 16px Arial, sans-serif; fill: #75ddbf; letter-spacing: 1.5px; }
-      .card { fill: url(#surface); stroke: url(#lineBlue); stroke-width: 2; }
-      .cardViolet { fill: url(#surfaceViolet); stroke: url(#lineViolet); stroke-width: 2; }
-      .cardGreen { fill: url(#surfaceGreen); stroke: url(#lineGreen); stroke-width: 2; }
-      .spine { fill: none; stroke: url(#lineBlue); stroke-width: 5; marker-end: url(#arrowBlue); filter: url(#glow); }
-      .memoryFlow { fill: none; stroke: url(#lineViolet); stroke-width: 4; stroke-dasharray: 11 10; marker-end: url(#arrowViolet); }
-      .humanFlow { fill: none; stroke: url(#lineGreen); stroke-width: 5; marker-end: url(#arrowGreen); }
-      .returnFlow { fill: none; stroke: url(#lineGreen); stroke-width: 3; stroke-dasharray: 12 11; stroke-opacity: 0.62; marker-end: url(#arrowGreen); }
-      .fineRule { stroke: #8aa4e0; stroke-opacity: 0.22; stroke-width: 1; }
+      text { font-family: Inter, "Helvetica Neue", Arial, sans-serif; }
+      .title { font-size: 58px; font-weight: 680; fill: #f3f6fb; letter-spacing: 1px; }
+      .subtitle { font-size: 23px; font-weight: 400; fill: #aeb9c9; }
+      .meta { font-size: 16px; font-weight: 650; fill: #69cce9; letter-spacing: 2.4px; }
+      .band { fill: #0c121d; fill-opacity: 0.72; stroke: #647188; stroke-opacity: 0.38; stroke-width: 1.5; }
+      .bandCyan { fill: #0b1722; fill-opacity: 0.72; stroke: #45bdd7; stroke-opacity: 0.72; stroke-width: 1.5; }
+      .bandViolet { fill: #151124; fill-opacity: 0.66; stroke: #9c68e4; stroke-opacity: 0.72; stroke-width: 1.5; }
+      .bandGreen { fill: #0d1d19; fill-opacity: 0.66; stroke: #47c98d; stroke-opacity: 0.72; stroke-width: 1.5; }
+      .section { font-size: 20px; font-weight: 700; fill: #d7dee8; letter-spacing: 1.8px; }
+      .sectionCyan { fill: #72d9ea; }
+      .sectionViolet { fill: #bd8bf2; }
+      .sectionGreen { fill: #72dca8; }
+      .node { fill: #0b111b; stroke: #79869a; stroke-opacity: 0.82; stroke-width: 1.6; }
+      .nodeCyan { fill: #0b141f; stroke: url(#cyan); stroke-width: 1.8; }
+      .nodeViolet { fill: #121020; stroke: url(#violet); stroke-width: 1.8; }
+      .nodeGreen { fill: #0c1715; stroke: url(#green); stroke-width: 1.8; }
+      .nodeTitle { font-size: 23px; font-weight: 700; fill: #f2f5fa; letter-spacing: 0.4px; }
+      .nodeCopy { font-size: 17px; font-weight: 400; fill: #aeb9c9; }
+      .tag { font-size: 14px; font-weight: 700; fill: #77869c; letter-spacing: 1.4px; }
+      .tagCyan { fill: #6ed3ea; }
+      .tagViolet { fill: #b98df0; }
+      .tagGreen { fill: #6dd9a4; }
+      .flowCyan { fill: none; stroke: url(#cyan); stroke-width: 3.5; marker-end: url(#arrowCyan); }
+      .flowViolet { fill: none; stroke: url(#violet); stroke-width: 3; marker-end: url(#arrowViolet); }
+      .flowGreen { fill: none; stroke: url(#green); stroke-width: 3.5; marker-end: url(#arrowGreen); }
+      .write { fill: none; stroke: #a174ec; stroke-opacity: 0.72; stroke-width: 2.5; stroke-dasharray: 8 7; }
+      .advisory { fill: none; stroke: #a174ec; stroke-width: 3; stroke-dasharray: 10 8; marker-end: url(#arrowViolet); }
+      .promote { fill: none; stroke: #53ce91; stroke-width: 3; stroke-dasharray: 10 8; marker-end: url(#arrowGreen); }
+      .flowLabel { font-size: 13px; font-weight: 700; fill: #77869c; letter-spacing: 1.2px; }
+      .flowLabelViolet { fill: #b98df0; }
+      .flowLabelGreen { fill: #69d49e; }
+      .legend { font-size: 15px; font-weight: 500; fill: #9da9ba; }
+      .rule { stroke: #637087; stroke-opacity: 0.28; stroke-width: 1; }
     </style>
   </defs>
 
-  <rect width="1400" height="1900" fill="url(#background)"/>
+  <rect width="1400" height="1900" fill="url(#bg)"/>
   <rect width="1400" height="1900" fill="url(#field)"/>
-  <path d="M0 330 H1400 M0 1495 H1400" class="fineRule"/>
 
-  <text x="110" y="104" class="eyebrow">VIGIL / V6 ALPHA / SYSTEM MAP</text>
-  <text x="110" y="194" class="title">A machine that remembers</text>
-  <text x="110" y="246" class="subtitle">It senses the world, makes five artistic decisions, reads the pixels,</text>
-  <text x="110" y="284" class="subtitle">chooses one work, and lets reviewed experience alter what comes next.</text>
+  <text x="70" y="78" class="meta">VIGIL / VERSION 6 ALPHA</text>
+  <text x="70" y="148" class="title">VIGIL SYSTEM ARCHITECTURE</text>
+  <text x="70" y="194" class="subtitle">Source-grounded artistic decision cycle with reflective memory and human review</text>
+  <line x1="70" y1="226" x2="1330" y2="226" class="rule"/>
 
-  <text x="110" y="375" class="section">AUTONOMOUS CYCLE</text>
-
-  <g filter="url(#shadow)">
-    <rect x="330" y="410" width="740" height="150" rx="8" class="card"/>
-    <rect x="330" y="410" width="12" height="150" rx="6" fill="url(#lineBlue)"/>
-    <text x="378" y="455" class="step">01 / SENSE</text>
-    <text x="378" y="505" class="cardTitle">World signals become evidence</text>
-    <text x="378" y="538" class="cardCopy">Events, attention and slow conditions retain source boundaries.</text>
-  </g>
-
-  <path d="M700 560 V610" class="spine"/>
+  <!-- 1. World model -->
+  <rect x="50" y="260" width="1300" height="280" rx="8" class="band"/>
+  <text x="80" y="306" class="section">1 / WORLD MODEL</text>
 
   <g filter="url(#shadow)">
-    <rect x="330" y="620" width="740" height="150" rx="8" class="card"/>
-    <rect x="330" y="620" width="12" height="150" rx="6" fill="url(#lineBlue)"/>
-    <text x="378" y="665" class="step">02 / FRAME</text>
-    <text x="378" y="715" class="cardTitle">World Reader forms the tension</text>
-    <text x="378" y="748" class="cardCopy">One bounded claim, one uncertainty and one counter-reading.</text>
+    <rect x="80" y="345" width="270" height="145" rx="6" class="node"/>
+    <text x="105" y="382" class="tag">INPUT</text>
+    <text x="105" y="420" class="nodeTitle">OPEN SOURCES</text>
+    <text x="105" y="452" class="nodeCopy">events / attention</text>
+    <text x="105" y="477" class="nodeCopy">slow context</text>
+
+    <rect x="400" y="345" width="270" height="145" rx="6" class="node"/>
+    <text x="425" y="382" class="tag">EVIDENCE</text>
+    <text x="425" y="420" class="nodeTitle">EVIDENCE PACKET</text>
+    <text x="425" y="452" class="nodeCopy">provenance / confidence</text>
+    <text x="425" y="477" class="nodeCopy">claim limits</text>
+
+    <rect x="720" y="345" width="270" height="145" rx="6" class="node"/>
+    <text x="745" y="382" class="tag">INTERPRETATION</text>
+    <text x="745" y="420" class="nodeTitle">WORLD READER</text>
+    <text x="745" y="452" class="nodeCopy">salience / uncertainty</text>
+    <text x="745" y="477" class="nodeCopy">counter-reading</text>
+
+    <rect x="1040" y="345" width="270" height="145" rx="6" class="node"/>
+    <text x="1065" y="382" class="tag">OUTPUT</text>
+    <text x="1065" y="420" class="nodeTitle">DAILY TENSION</text>
+    <text x="1065" y="452" class="nodeCopy">one bounded</text>
+    <text x="1065" y="477" class="nodeCopy">public claim</text>
   </g>
 
-  <path d="M700 770 V820" class="spine"/>
+  <path d="M350 417 H395" class="flowCyan"/>
+  <path d="M670 417 H715" class="flowCyan"/>
+  <path d="M990 417 H1035" class="flowCyan"/>
+
+  <!-- 2. Artistic decision cycle -->
+  <rect x="50" y="590" width="1300" height="570" rx="8" class="bandCyan"/>
+  <text x="80" y="637" class="section sectionCyan">2 / ARTISTIC DECISION CYCLE</text>
+  <text x="1055" y="637" class="flowLabel">AUTONOMOUS RUNTIME</text>
 
   <g filter="url(#shadow)">
-    <rect x="330" y="830" width="740" height="150" rx="8" class="card"/>
-    <rect x="330" y="830" width="12" height="150" rx="6" fill="url(#lineBlue)"/>
-    <text x="378" y="875" class="step">03 / IMAGINE</text>
-    <text x="378" y="925" class="cardTitle">Five autonomous positions</text>
-    <text x="378" y="958" class="cardCopy">Artistic Reasoner and Concept Critic develop distinct visual acts.</text>
+    <rect x="80" y="690" width="350" height="150" rx="6" class="nodeCyan"/>
+    <text x="105" y="727" class="tag tagCyan">POSITION</text>
+    <text x="105" y="765" class="nodeTitle">ARTISTIC REASONER</text>
+    <text x="105" y="797" class="nodeCopy">stance / metaphor</text>
+    <text x="105" y="822" class="nodeCopy">material action</text>
+
+    <rect x="525" y="690" width="350" height="150" rx="6" class="nodeCyan"/>
+    <text x="550" y="727" class="tag tagCyan">DIVERGENCE</text>
+    <text x="550" y="765" class="nodeTitle">FIVE POSITIONS</text>
+    <text x="550" y="797" class="nodeCopy">distinct concepts</text>
+    <text x="550" y="822" class="nodeCopy">before rendering</text>
+
+    <rect x="970" y="690" width="350" height="150" rx="6" class="nodeCyan"/>
+    <text x="995" y="727" class="tag tagCyan">PRE-GENERATION GATE</text>
+    <text x="995" y="765" class="nodeTitle">CONCEPT CRITIC</text>
+    <text x="995" y="797" class="nodeCopy">clarity / relevance</text>
+    <text x="995" y="822" class="nodeCopy">generative risk</text>
+
+    <rect x="970" y="900" width="350" height="150" rx="6" class="nodeCyan"/>
+    <text x="995" y="937" class="tag tagCyan">RENDER</text>
+    <text x="995" y="975" class="nodeTitle">IMAGE GENERATION</text>
+    <text x="995" y="1007" class="nodeCopy">five autonomous images</text>
+
+    <rect x="525" y="900" width="350" height="150" rx="6" class="nodeCyan"/>
+    <text x="550" y="937" class="tag tagCyan">VISUAL EVALUATION</text>
+    <text x="550" y="975" class="nodeTitle">PIXEL CRITIC</text>
+    <text x="550" y="1007" class="nodeCopy">blind read / informed read</text>
+    <text x="550" y="1032" class="nodeCopy">comparison</text>
+
+    <rect x="80" y="900" width="350" height="150" rx="6" class="nodeCyan"/>
+    <text x="105" y="937" class="tag tagCyan">SELECTION</text>
+    <text x="105" y="975" class="nodeTitle">MACHINE CHOICE</text>
+    <text x="105" y="1007" class="nodeCopy">one work fixed before</text>
+    <text x="105" y="1032" class="nodeCopy">human review</text>
   </g>
 
-  <path d="M700 980 V1030" class="spine"/>
+  <path d="M1175 490 V565 H255 V685" class="flowCyan"/>
+  <text x="280" y="565" class="flowLabel">CURRENT EVIDENCE ENTERS FIRST</text>
+  <path d="M430 765 H520" class="flowCyan"/>
+  <path d="M875 765 H965" class="flowCyan"/>
+  <path d="M1145 840 V895" class="flowCyan"/>
+  <path d="M970 975 H880" class="flowCyan"/>
+  <path d="M525 975 H435" class="flowCyan"/>
+
+  <!-- Trace buses: all artistic decisions are recorded -->
+  <path d="M255 840 V870 M700 840 V870 M1145 840 V870 M255 1050 V1090 M700 1050 V1090 M1145 1050 V1090" class="write"/>
+  <path d="M255 870 H1330 V1320 H1325 M255 1090 H1330" class="write"/>
+  <text x="1050" y="1125" class="flowLabel flowLabelViolet">ALL DECISIONS WRITE TO TRACE</text>
+
+  <!-- 3. Trace and reflective memory -->
+  <rect x="50" y="1200" width="1300" height="250" rx="8" class="bandViolet"/>
+  <text x="80" y="1245" class="section sectionViolet">3 / TRACE AND REFLECTIVE MEMORY</text>
 
   <g filter="url(#shadow)">
-    <rect x="330" y="1040" width="740" height="150" rx="8" class="card"/>
-    <rect x="330" y="1040" width="12" height="150" rx="6" fill="url(#lineBlue)"/>
-    <text x="378" y="1085" class="step">04 / MAKE</text>
-    <text x="378" y="1135" class="cardTitle">Five images enter the world</text>
-    <text x="378" y="1168" class="cardCopy">Prompt Director translates each position for GPT Image 2.</text>
+    <rect x="80" y="1280" width="540" height="125" rx="6" class="nodeViolet"/>
+    <text x="105" y="1317" class="tag tagViolet">ADVISORY RETRIEVAL</text>
+    <text x="105" y="1355" class="nodeTitle">HINDSIGHT</text>
+    <text x="105" y="1385" class="nodeCopy">reviewed failures / methods / corrections</text>
+
+    <rect x="780" y="1280" width="540" height="125" rx="6" class="nodeViolet"/>
+    <text x="805" y="1317" class="tag tagViolet">PROVENANCE</text>
+    <text x="805" y="1355" class="nodeTitle">APPEND-ONLY TRACE</text>
+    <text x="805" y="1385" class="nodeCopy">sources / concepts / prompts / pixels / criticism / choice</text>
   </g>
 
-  <path d="M700 1190 V1240" class="spine"/>
+  <path d="M80 1342 H25 V765 H75" class="advisory"/>
+  <path d="M1330 1320 H1325" class="flowViolet"/>
+
+  <!-- 4. Human authority -->
+  <rect x="50" y="1490" width="1300" height="300" rx="8" class="bandGreen"/>
+  <text x="80" y="1537" class="section sectionGreen">4 / HUMAN AUTHORITY</text>
 
   <g filter="url(#shadow)">
-    <rect x="330" y="1250" width="740" height="150" rx="8" class="card"/>
-    <rect x="330" y="1250" width="12" height="150" rx="6" fill="url(#lineBlue)"/>
-    <text x="378" y="1295" class="step">05 / REFLECT</text>
-    <text x="378" y="1345" class="cardTitle">The pixels answer back</text>
-    <text x="378" y="1378" class="cardCopy">Blind reading precedes informed criticism and comparison.</text>
+    <rect x="220" y="1590" width="420" height="140" rx="6" class="nodeGreen"/>
+    <text x="245" y="1637" class="tag tagGreen">REVIEW</text>
+    <text x="245" y="1675" class="nodeTitle">HUMAN VERDICT</text>
+    <text x="245" y="1705" class="nodeCopy">accept / reject / correct</text>
+
+    <rect x="760" y="1590" width="420" height="140" rx="6" class="nodeGreen"/>
+    <text x="785" y="1637" class="tag tagGreen">GOVERNANCE</text>
+    <text x="785" y="1675" class="nodeTitle">RELEASE / PROMOTION</text>
+    <text x="785" y="1702" class="nodeCopy">publication / method promotion</text>
+    <text x="785" y="1725" class="nodeCopy">memory update</text>
   </g>
 
-  <path d="M700 1400 V1450" class="spine"/>
+  <path d="M255 1050 V1565 H430 V1595" class="flowCyan"/>
+  <text x="278" y="1574" class="flowLabel">MACHINE SELECTION PRECEDES VERDICT</text>
+  <path d="M640 1662 H755" class="flowGreen"/>
+  <path d="M970 1725 V1760 H70 V1430 H350 V1410" class="promote"/>
+  <text x="395" y="1776" class="flowLabel flowLabelGreen">ONLY REVIEWED EXPERIENCE MAY BECOME FUTURE MEMORY</text>
 
-  <g filter="url(#shadow)">
-    <rect x="330" y="1460" width="740" height="150" rx="8" class="card"/>
-    <rect x="330" y="1460" width="12" height="150" rx="6" fill="url(#lineBlue)"/>
-    <text x="378" y="1505" class="step">06 / CHOOSE</text>
-    <text x="378" y="1555" class="cardTitle">VIGIL commits to one work</text>
-    <text x="378" y="1588" class="cardCopy">The choice is fixed before the human verdict is known.</text>
-  </g>
-
-  <g filter="url(#shadow)">
-    <rect x="40" y="795" width="250" height="188" rx="8" class="cardViolet"/>
-    <text x="70" y="838" class="stepViolet">MEMORY</text>
-    <text x="70" y="882" class="sideTitle">Hindsight recall</text>
-    <text x="70" y="918" class="sideCopy">Reviewed traces,</text>
-    <text x="70" y="947" class="sideCopy">failures and methods</text>
-    <text x="70" y="976" class="sideCopy">return after framing.</text>
-  </g>
-  <path d="M290 890 C312 890 318 875 330 875" class="memoryFlow"/>
-  <text x="40" y="1023" class="flowLabelViolet">ADVISORY, NEVER FACTUAL</text>
-
-  <g filter="url(#shadow)">
-    <rect x="1110" y="1202" width="250" height="200" rx="8" class="cardViolet"/>
-    <text x="1140" y="1245" class="stepViolet">TRACE</text>
-    <text x="1140" y="1288" class="sideTitle">Nothing disappears</text>
-    <text x="1140" y="1324" class="sideCopy">Sources, prompts,</text>
-    <text x="1140" y="1353" class="sideCopy">pixels, criticism</text>
-    <text x="1140" y="1382" class="sideCopy">and choice stay bound.</text>
-  </g>
-  <path d="M1070 1535 C1185 1510 1235 1450 1235 1402" class="memoryFlow"/>
-
-  <text x="110" y="1688" class="section">HUMAN AUTHORITY</text>
-
-  <g filter="url(#shadow)">
-    <rect x="110" y="1720" width="520" height="120" rx="8" class="cardGreen"/>
-    <text x="150" y="1762" class="stepGreen">07 / VERDICT</text>
-    <text x="150" y="1810" class="sideTitle">Accept, reject or correct</text>
-  </g>
-
-  <path d="M630 1780 H760" class="humanFlow"/>
-
-  <g filter="url(#shadow)">
-    <rect x="770" y="1720" width="520" height="120" rx="8" class="cardGreen"/>
-    <text x="810" y="1762" class="stepGreen">08 / RELEASE</text>
-    <text x="810" y="1810" class="sideTitle">Publish or promote a method</text>
-  </g>
-
-  <path d="M1030 1840 V1870 H20 V1020 H165 V991" class="returnFlow"/>
-  <text x="530" y="1878" class="flowLabelGreen">REVIEWED EXPERIENCE MAY RETURN AS FUTURE MEMORY</text>
+  <!-- Legend -->
+  <line x1="70" y1="1840" x2="1330" y2="1840" class="rule"/>
+  <line x1="90" y1="1872" x2="145" y2="1872" stroke="#58c4f5" stroke-width="4"/>
+  <text x="158" y="1878" class="legend">autonomous runtime</text>
+  <line x1="450" y1="1872" x2="505" y2="1872" stroke="#9a6cf4" stroke-width="4" stroke-dasharray="8 6"/>
+  <text x="518" y="1878" class="legend">trace and advisory memory</text>
+  <line x1="880" y1="1872" x2="935" y2="1872" stroke="#50cf91" stroke-width="4"/>
+  <text x="948" y="1878" class="legend">human authority</text>
 </svg>
