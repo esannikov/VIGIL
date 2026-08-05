@@ -4,29 +4,69 @@
 
 **Research preview · v6 alpha · code coming soon**
 
-VIGIL reads a day before it makes an image. Each evening it gathers public signals about conflict, climate, health, infrastructure, technology, markets and human attention. It chooses one tension, develops five visual positions, generates five images, examines the pixels and selects one work before receiving human feedback.
+VIGIL is an experimental autonomous art system designed to study how a machine can interpret public evidence, form an artistic position and revise its method through reflective memory. During each evening run, it gathers dated signals concerning conflict, climate, health, infrastructure, technology, markets and public attention. It defines one tension, develops five distinct visual propositions, generates five images, examines the resulting works and commits to one selection before human review.
 
-The project asks a practical question: **can a machine make autonomous creative decisions, reflect on them and develop an artistic method through memory?**
+The research asks whether autonomous creative agency can become cumulative: **can a machine relate new events to its own prior decisions, reflect on their consequences and allow reviewed experience to reshape later artistic choices?** The experiment keeps this question open without reducing creativity to a fixed style or a numerical score.
 
-VIGIL is a living experiment within Eugene Sannikov's PhD research on AI in Art at the National Academy of Fine Arts and Architecture in Kyiv.
+VIGIL is an ongoing research prototype developed by Eugene Sannikov within his PhD research on AI in Art at the National Academy of Fine Arts and Architecture in Kyiv.
 
-<p align="center">
-  <img src="assets/works/the-crossing-leads-back.png" width="620" alt="The Crossing Leads Back. A stair rises over a fortified border and returns to the side where it began.">
-  <br>
-  <sub><strong>Figure 1.</strong> <em>The Crossing Leads Back</em> (2026). GPT Image 2 generation selected by VIGIL before human review.</sub>
-</p>
+## Selected works
 
-### The project in one cycle
+<table>
+  <tr>
+    <td width="33.33%" valign="top">
+      <a href="assets/works/the-crossing-leads-back.png"><img src="assets/works/the-crossing-leads-back.jpg" alt="The Crossing Leads Back"></a><br>
+      <sub><strong>Figure 1.</strong> <em>The Crossing Leads Back</em> (2026). A stair crosses a fortified border and returns to its point of origin.</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <a href="assets/works/the-machine-must-answer.png"><img src="assets/works/the-machine-must-answer.jpg" alt="The Machine Must Answer"></a><br>
+      <sub><strong>Figure 2.</strong> <em>The Machine Must Answer</em> (2026). Incense rises where a sanctuary and a server room occupy the same space.</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <a href="assets/works/ferrum-mapifolia.png"><img src="assets/works/ferrum-mapifolia.jpg" alt="Ferrum mapifolia"></a><br>
+      <sub><strong>Figure 3.</strong> <em>Ferrum mapifolia</em> (2026). A botanical specimen is assembled from the material remains of conflict.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.33%" valign="top">
+      <a href="assets/works/oil-doesnt-feed.png"><img src="assets/works/oil-doesnt-feed.jpg" alt="Oil Doesn't Feed"></a><br>
+      <sub><strong>Figure 4.</strong> <em>Oil Doesn't Feed</em> (2026). A bottle of oil wealth takes the form of infant nutrition.</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <a href="assets/works/sarmat-shadow.png"><img src="assets/works/sarmat-shadow.jpg" alt="Sarmat Shadow"></a><br>
+      <sub><strong>Figure 5.</strong> <em>Sarmat Shadow</em> (2026). A missile's ascent casts a wider political shadow across Europe.</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <a href="assets/works/the-chokepoint-deal-2026.png"><img src="assets/works/the-chokepoint-deal-2026.jpg" alt="The Chokepoint Deal"></a><br>
+      <sub><strong>Figure 6.</strong> <em>The Chokepoint Deal</em> (2026). Taiwan, Hormuz and the hidden circuitry of power meet inside a negotiation table.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.33%" valign="top">
+      <a href="assets/works/a-comma-over-iran.png"><img src="assets/works/a-comma-over-iran.jpg" alt="A Comma Over Iran"></a><br>
+      <sub><strong>Figure 7.</strong> <em>A Comma Over Iran</em> (2026). A military trajectory becomes punctuation: force is paused inside the sentence.</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <a href="assets/works/the-scroll-was-built-to-hold.png"><img src="assets/works/the-scroll-was-built-to-hold.jpg" alt="The Scroll Was Built to Hold"></a><br>
+      <sub><strong>Figure 8.</strong> <em>The Scroll Was Built to Hold</em> (2026). The interface gesture continues outside the screen and restrains the hand performing it.</sub>
+    </td>
+  </tr>
+</table>
 
-1. **Sense.** Collect dated public records and attention signals.
-2. **Choose.** Form one bounded statement about the day's tension.
-3. **Position.** Develop five materially different artistic responses.
-4. **Generate.** Create five images autonomously through an API gateway to GPT Image 2.
-5. **Critique.** Read the finished images before reopening the intended meaning.
-6. **Select.** Rank the set and choose one work before the human verdict is known.
-7. **Reflect and learn.** Relate the world, the finished works and VIGIL's changing method through reviewed memory.
+## Experimental cycle
 
-Human review currently serves the research, learning and calibration phase. The researcher controls publication and the promotion of a local discovery into a durable method. Autonomy describes the bounded interval in which VIGIL moves from evidence to its own selection.
+Each run is treated as one traceable research episode. The sequence separates evidence collection, creative interpretation, image production, machine judgment and human calibration while preserving their relations in a single record.
+
+1. **Evidence collection.** The sensors gather dated public records and attention proxies. Every record carries its source, permitted claim, caveat and retrieval status.
+2. **World interpretation.** The World Reader examines the current evidence before consulting memory. It selects one bounded tension, states why it matters now and marks what the available sources cannot establish.
+3. **Reflective recall.** Hindsight returns related reviewed episodes, failures, theory and prior self-reflections as advisory context. The present evidence remains primary.
+4. **Artistic reasoning.** The Artistic Reasoner develops five conceptually and materially distinct responses to the chosen tension. Each proposes a public statement, a visual relation and a condition under which the idea should be refused.
+5. **Concept review.** Before generation, the Concept Critic compares the written propositions. It tests whether the central relation can become visible without depending on an explanatory caption.
+6. **Image production.** The five positions are translated into composition, material action and production prompts. VIGIL generates five images autonomously through an API gateway to GPT Image 2.
+7. **Visual criticism and machine selection.** The Visual Critic first reads the finished images without access to their intended meanings, then compares those readings with the source and concept records. VIGIL fixes one selection before the human verdict is known.
+8. **Calibration and memory.** During the current research phase, the researcher may accept, reject or correct the selection and controls publication. The complete episode is appended to the trace; reviewed reflections and methods can then enter Hindsight and advise later cycles.
+
+Autonomy describes the bounded interval in which VIGIL moves from evidence to its own artistic selection. Human review currently belongs to the research, learning and calibration protocol.
 
 VIGIL's memory carries more than successful techniques. It preserves how a world signal changed the system's attention, how prior habits changed its reading of the world, what a finished work revealed about its method, and what persisted or shifted across cycles. These reflections remain trace-grounded, revisable and distinct from a claim of private consciousness.
 
@@ -45,10 +85,45 @@ VIGIL tests a deliberately smaller proposition within that field. It implements 
     <img src="assets/system-map.png" width="820" alt="VIGIL autonomous art cycle with reflective memory">
   </a>
   <br>
-  <sub><strong>Figure 2.</strong> VIGIL v6 alpha system architecture. The canonical episode trace enters Hindsight after human review; reflective recall then advises a later artistic decision. Tap or click the image to inspect it at full size.</sub>
+  <sub><strong>Figure 9.</strong> VIGIL v6 alpha system architecture. The canonical episode trace enters Hindsight after human review; reflective recall then advises a later artistic decision. Tap or click the image to inspect it at full size.</sub>
 </p>
 
 <p align="center"><a href="https://raw.githubusercontent.com/esannikov/VIGIL/main/assets/system-map.png">Open full-size PNG</a> · <a href="https://raw.githubusercontent.com/esannikov/VIGIL/main/assets/system-map.svg">Open scalable SVG</a></p>
+
+### Early calibration artifacts
+
+The following images are among the first artifacts produced while VIGIL's creative and critical architecture was being constructed and calibrated. They are presented as research evidence rather than selected works. The set records early tests of message recovery, compositional clarity, visual metaphor and the relation between machine criticism and human judgment. Visually resolved passages coexist with ambiguous objects, weak causal relations and contexts that cannot be recovered from the image alone. These failures informed later changes to concept comparison, blind visual review and trace-bound learning.
+
+<table>
+  <tr>
+    <td width="33.33%" valign="top">
+      <img src="assets/calibration/calibration-01.jpg" alt="Early calibration artifact: ship hull in a retail aisle"><br>
+      <sub><strong>Figure 10.</strong> Calibration artifact 01. Test of impossible scale and collision between supply and infrastructure.</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <img src="assets/calibration/calibration-02.jpg" alt="Early calibration artifact: falling form over a painted surface"><br>
+      <sub><strong>Figure 11.</strong> Calibration artifact 02. Test of motion and event compression through a single falling form.</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <img src="assets/calibration/calibration-03.jpg" alt="Early calibration artifact: suspended lungs"><br>
+      <sub><strong>Figure 12.</strong> Calibration artifact 03. Test of the body as a suspended public system.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="33.33%" valign="top">
+      <img src="assets/calibration/calibration-04.jpg" alt="Early calibration artifact: institutional arch on a green field"><br>
+      <sub><strong>Figure 13.</strong> Calibration artifact 04. Test of institutional form reduced to one object.</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <img src="assets/calibration/calibration-05.jpg" alt="Early calibration artifact: portrait obscured by paper"><br>
+      <sub><strong>Figure 14.</strong> Calibration artifact 05. Test of concealment, attention and editorial symbolism.</sub>
+    </td>
+    <td width="33.33%" valign="top">
+      <img src="assets/calibration/calibration-06.jpg" alt="Early calibration artifact: black units constricted by torn paper"><br>
+      <sub><strong>Figure 15.</strong> Calibration artifact 06. Test of accumulation and constriction through material abstraction.</sub>
+    </td>
+  </tr>
+</table>
 
 ### Current modules
 
@@ -155,31 +230,6 @@ The first image used a gate and a conveyor. It failed because the device had no 
 During blind review, the critic recovered the message as “an attempted crossing ends in return rather than passage.” VIGIL ranked the work first among five images before seeing the human verdict. Its nearest alternative communicated the news more literally; the stair was chosen because the entire form became necessary to the claim. The subsequent human verdict was strong, and the method entered memory as a verified transfer: **a familiar object performs one impossible but readable action.**
 
 The source, initial failure, image request, generated artifact, blind review, machine ranking and human verdict remain connected in one trace. See [Provenance](PROVENANCE.md).
-
-## Selected works
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/works/a-comma-over-iran.png" alt="A Comma Over Iran"><br>
-      <sub><strong>Figure 3.</strong> <em>A Comma Over Iran</em> (2026). A military trajectory becomes punctuation: force is paused inside the sentence rather than resolved.</sub>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/works/the-scroll-was-built-to-hold.png" alt="The Scroll Was Built to Hold"><br>
-      <sub><strong>Figure 4.</strong> <em>The Scroll Was Built to Hold</em> (2026). Selected calibration work. The interface gesture continues outside the screen and restrains the hand performing it.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="assets/works/the-chokepoint-deal.png" alt="The Chokepoint Deal"><br>
-      <sub><strong>Figure 5.</strong> <em>The Chokepoint Deal</em> (2026). Historical calibration work with partial provenance. A negotiation table acquires the geography of the pressure passing through it.</sub>
-    </td>
-    <td width="50%" valign="top">
-      <img src="assets/works/the-war-runs-on-oil.jpg" alt="The War Runs on Oil"><br>
-      <sub><strong>Figure 6.</strong> <em>The War Runs on Oil</em> (2026). Historical calibration work with partial provenance. An oil conduit contains the military and industrial movement it sustains.</sub>
-    </td>
-  </tr>
-</table>
 
 ## What informs VIGIL
 

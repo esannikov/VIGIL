@@ -40,7 +40,46 @@ VIGIL treats the image, its source boundary and its review history as one resear
 - **Status:** selected calibration work; the final revision still requires a separate artifact-level human verdict before it can support a durable method.
 - **Artifact SHA-256:** `785a75186c069c1266bc356bcadefec0e9be8a4a2476a0dfead0c06f84538c07`
 
+### Sarmat Shadow
+
+- **Date:** 13 May 2026
+- **Source context:** the dated signal packet recorded international headline attention around Russia's Sarmat missile. The source role is `attention`; it does not independently establish military capability or intent.
+- **Bounded claim:** the launch was interpreted as a political act of intimidation directed across Europe, with Ukraine retained as the local ethical ground.
+- **Visual operation:** one vertical plume, one long shadow and one pressure field replace an earlier dashboard-like composition.
+- **Generation:** GPT Image 2 under the recorded primary-model policy.
+- **Review:** pre-generation critic 8.6/10; post-generation critic 8.7/10.
+- **Human verdict:** strong.
+- **Trace status:** complete human-reviewed trace retained under `2026-05-13_sarmat_shadow_reflection`.
+- **Published asset SHA-256:** `6568d10945b763ac3e88fbbfb9ec101467dce014393ed29966f36b194d7577ed`
+
+### Ferrum mapifolia
+
+- **Date:** 5 April 2026
+- **Concept context:** an impossible botanical specimen made from rusted iron, military maps, petroleum, cartridge cases and electrical wire.
+- **Visual operation:** material contradiction is held inside the conventions of an archival museum display.
+- **Generation:** Nano Banana 2, retained as a historical model result; GPT Image 2 is the current primary image model.
+- **Review:** post-generation critic 10/10 in the historical trace.
+- **Human verdict:** strong.
+- **Trace status:** human-reviewed trace retained under `2026-04-05_specimen_478`. Later calibration identified museum display as a repetition risk rather than a default solution.
+- **Published asset SHA-256:** `5b5356d3d04c688cb695cf6ce16ab2b15de4b543598fe7afc15013c84042fca4`
+
 ## Historical calibration works
+
+### The Machine Must Answer
+
+- **Role in the project:** a historical response to a 25 May 2026 attention signal concerning reports of Pope Leo's first encyclical and its treatment of AI ethics.
+- **Visual operation:** a server room and a sanctuary occupy one continuous architecture; incense becomes the shared ritual object.
+- **Provenance status:** the dated source packet is retained, but the original generation and review trace predates the current complete artifact schema.
+- **Research use:** visual and conceptual calibration only. The image does not serve as evidence for the reported event.
+- **Published asset SHA-256:** `03242ff74fb04bd1d3a5e728bb644be6d26891784f83e58d4374def160c7cd72`
+
+### Oil Doesn't Feed
+
+- **Role in the project:** a reconstructed legacy work about the separation between resource wealth and child welfare.
+- **Visual operation:** a baby bottle, a familiar object of care, contains petroleum.
+- **Provenance status:** the earlier concept lineage is known, while the displayed 5 August 2026 revision is recorded as a legacy work without a resolved source trace.
+- **Research use:** visual calibration only. The caption states an interpretation and does not establish a quantified relationship.
+- **Published asset SHA-256:** `433309999e5a36b82ecfb2b8fd56ce82653e9677d6261423be0b48534b06c1f9`
 
 ### The Chokepoint Deal
 
@@ -48,7 +87,8 @@ VIGIL treats the image, its source boundary and its review history as one resear
 - **Visual operation:** the negotiation table becomes the geography through which strategic power must pass.
 - **Provenance status:** original raster recovered; complete source packet and generation trace were not preserved in the current schema.
 - **Research use:** visual calibration only. It does not activate a method or support a factual claim in the current system.
-- **Published asset SHA-256:** `ac237ca2eb3d2f58c4f14c938a65629ec7adc262521d5f9edbc8131a4cf085ad`
+- **Published gallery asset SHA-256:** `fb04f295d3c3d9b030b2606c4c34ebcada5ae03dcf1f871fc17f5813c44f3a56`
+- **Earlier recovered asset SHA-256:** `ac237ca2eb3d2f58c4f14c938a65629ec7adc262521d5f9edbc8131a4cf085ad`
 
 ### The War Runs on Oil
 
