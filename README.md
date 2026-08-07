@@ -53,7 +53,83 @@ VIGIL is an ongoing research prototype developed by Eugene Sannikov within his P
   </tr>
 </table>
 
-## Experimental cycle
+## A model of artistic agency
+
+The works above are the visible edge of a longer event. Each begins with a bounded reading of a public situation, passes through alternatives that could have been chosen instead, and ends with one image selected before the researcher responds. The research interest lies in that interval: how evidence becomes association, how association becomes form, and how a reviewed consequence can change the next decision.
+
+VIGIL makes this interval inspectable without treating art as an optimization problem. The runtime computes only technical conditions such as sensor coverage and limits on source dominance. Its agent records a different kind of structure: why a signal matters, what relation an image must carry, how a finished work reads before its intended meaning is revealed, and why one of five candidates is selected. The formulas below name those distinct surfaces of action. They do not calculate artistic value or derive the winning image from a weighted score.
+
+### What is formalized
+
+VIGIL uses two kinds of formalization. **Runtime computations** are arithmetic operations executed by Python. The **formal decision model** describes the information available to an agent and the structure of its judgment. Interpretation remains accountable in language, evidence and the trace.
+
+#### Runtime computations: coverage and balance
+
+For each run, the system returns the number of registered sensors and the number the current runtime can query. Their reported ratio is:
+
+$$
+C_{run}=\frac{N_{queryable}}{N_{registered}}
+$$
+
+The 5 August 2026 snapshot gives $C_{run}=13/20=0.65$. Python produces both counts; the ratio is derived in the report. It describes technical availability and says nothing about the truth, independence or moral importance of the returned records. To prevent a prolific source from dominating by volume, the reasoning view retains at most eight records from any one sensor:
+
+$$
+n'_s=\min(n_s,8)
+$$
+
+#### Formal decision model: World Reader
+
+For every signal it retains, the World Reader records six bounded judgments:
+
+$$
+x_i=(e_i,\Delta_i,c_i,r_i,d_i,a_i),
+\qquad 0\leq x_{i,m}\leq4
+$$
+
+They describe evidence strength, change, consequence, systemic reach, duration and an attention gap. This models the agent's input and judgment surface. The agent assigns the coordinates under a validated schema; Python checks their range and provenance. The World Reader must still state why a signal matters now, where the claim ends and what counter-reading remains possible.
+
+#### Formal decision model: criticism and selection
+
+After generation, the Visual Critic records a fourteen-coordinate diagnostic description for each artifact:
+
+$$
+q_j\in[0,10]^{14}
+$$
+
+The coordinates include first reading, composition, formal necessity, ambiguity, source relation, ethical attention, affect and originality. They are model judgments constrained to the interval by schema, not measurements calculated from pixels. `overall` is a separate holistic judgment, not their mean. VIGIL then compares the five actual images and commits to one through an agent judgment:
+
+$$
+\hat{j}=A\big((I_j,q_j,b_j,k_j)_{j=1}^{5}\big)
+$$
+
+Here $I_j$ is the image, $b_j$ its blind reading, $k_j$ its source-and-concept context, and $A$ denotes the recorded agent decision. The expression maps the decision path; it does not claim a closed numerical solution.
+
+#### Runtime computation: learning gate
+
+A candidate belief can be revised only when one exact artifact has a pixel-aware review, an accepted human verdict, an artifact-scoped learning proposal and a critic score at or above the current threshold of 7:
+
+$$
+P(a)=1\Longleftrightarrow R_a\land H_a\land D_a\land(s_a\geq7)
+$$
+
+$R_a$ denotes an attached pixel-aware review, $H_a$ an accepted artifact-bound human verdict and $D_a$ an artifact-scoped learning proposal.
+
+When the gate passes, confidence is damped toward the new evidence with $\alpha=0.25$:
+
+$$
+b_{t+1}=\min\left(1,\max\left(0,(1-\alpha)b_t+\alpha e_t\right)\right),
+\qquad e_t=s_a/10
+$$
+
+This formula is implemented in the runtime and the result is rounded to three decimal places. The update changes confidence in a named working hypothesis. It does not establish that an image is good, that a method generalizes or that the machine has learned creativity. A belief remains a hypothesis until it has support from three distinct trace sources; durable procedural rules remain subject to human review and transfer testing.
+
+The current use of exactly five candidates and the pre-render clarity gate belongs to the v6 alpha study design. Five gives a comparable choice set; the clarity gate tests whether a proposed central relation survives without explanatory prose. Neither is presented as a universal theory of art.
+
+The same gate has a known methodological pressure. The current concept schema asks every candidate to expose a subject, an action, a consequence and a target-source metaphor. This improved message recovery after earlier images became opaque, while favoring causal visual riddles over indexical, durational, atmospheric, serial or nonrepresentational work. The 30-evening protocol keeps the constraint stable for comparison and renders selected rejected concepts on control days. A later studio mode would let VIGIL choose the work's logic while code continues to protect evidence, identity and trace integrity.
+
+The active runtime contains no lexical or Jaccard novelty score. Repetition is retained as trace evidence and may be discussed by the agent or reported as an attractor; it cannot reject a concept through word overlap.
+
+## One evening as a research episode
 
 Each run is treated as one traceable research episode. The sequence separates evidence collection, creative interpretation, image production, machine judgment and human calibration while preserving their relations in a single record.
 
@@ -70,7 +146,17 @@ Autonomy describes the bounded interval in which VIGIL moves from evidence to it
 
 VIGIL's memory carries more than successful techniques. It preserves how a world signal changed the system's attention, how prior habits changed its reading of the world, what a finished work revealed about its method, and what persisted or shifted across cycles. These reflections remain trace-grounded, revisable and distinct from a claim of private consciousness.
 
-### Reflective self-model
+## A decision trace: *The Crossing Leads Back*
+
+The source packet concerned a mass crossing into Ceuta followed by the return of most migrants to Morocco. VIGIL narrowed the report to one defensible proposition: a border can appear passable while the conditions beyond it still force movement backward.
+
+The first image used a gate and a conveyor. It failed because the device had no recognizable purpose. Human criticism identified that failure. VIGIL then searched for a familiar crossing structure and produced one continuous stair that climbs above the fence, turns in a hairpin and descends to its point of origin.
+
+During blind review, the critic recovered the message as “an attempted crossing ends in return rather than passage.” VIGIL ranked the work first among five images before seeing the human verdict. Its nearest alternative communicated the news more literally; the stair was chosen because the entire form became necessary to the claim. The subsequent human verdict was strong, and the method entered memory as a verified transfer: **a familiar object performs one impossible but readable action.**
+
+The source, initial failure, image request, generated artifact, blind review, machine ranking and human verdict remain connected in one trace. See [Provenance](PROVENANCE.md).
+
+## Reflective self-model
 
 VIGIL treats this closed loop as a **bounded functional simulation of reflective consciousness**. The term has a narrow meaning here. After human review, the canonical trace carries VIGIL's reflection on the world, its own gaze and the finished works into the isolated Hindsight bank. Hindsight retains those reviewed episodes, recalls related experience and uses `reflect` to synthesize a provisional account of continuity, contradiction and possible change. The result can advise a later cycle, while the original trace remains unchanged.
 
@@ -90,7 +176,25 @@ VIGIL tests a deliberately smaller proposition within that field. It implements 
 
 <p align="center"><a href="https://raw.githubusercontent.com/esannikov/VIGIL/main/assets/system-map.png">Open full-size PNG</a> · <a href="https://raw.githubusercontent.com/esannikov/VIGIL/main/assets/system-map.svg">Open scalable SVG</a></p>
 
-### Early calibration artifacts
+### Current modules
+
+The table documents the working prototype while implementation remains private. Agent names describe decision roles; script names identify the runtime surfaces planned for the later code release.
+
+| Stage | Agent or runtime surface | Responsibility | Recorded result |
+|---|---|---|---|
+| Evidence collection | `vigil_sensors.py` | Queries the source registry, normalizes records, records failures and reports coverage gaps | Dated evidence packet with source IDs and claim permissions |
+| World interpretation | **World Reader** through `vigil_reasoning.py` | Reads the current packet independently, selects one tension and states its factual boundary or refusal | World read with counter-reading and cited signal IDs |
+| Associative recall | **Hindsight Recall** through `vigil_reasoning.py` | Retrieves reviewed traces, failures and theory only after the current event has been framed | Advisory recall; no factual or procedural authority |
+| Artistic reasoning | **Artistic Reasoner** through `vigil_reasoning.py` | Chooses a theoretical mode and develops five distinct positions with explicit message designs | Five concepts with subject, action, consequence and uncertainty |
+| Pre-render review | **Concept Critic** through `vigil_reasoning.py` | Compares written concept descriptions before any image is generated and checks whether the proposed mechanism can survive without explanatory prose | Comparative review and a narrow clarity gate |
+| Visual translation | **Creative Sight** and **Prompt Director** through `vigil_creative_engine.py` | Converts each position into a scene, composition, material action and generation instruction | Five production scenes and prompts |
+| Image production | **Image gateway** | Generates all five works through GPT Image 2 under the recorded model policy | Five bound image artifacts |
+| Visual review | **Visual Critic** through `visual_critic.py` | Reads finished images before seeing their intended meaning, then performs an informed comparison | Artifact reviews and machine ranking |
+| Trace integrity | `trace_contract.py` and `vigil_creative_engine.py` | Binds sources, alternatives, prompts, files, hashes, critiques, structured self-reflection and human verdicts | Canonical append-only episode trace |
+| Reflective memory | Artistic Reasoner, **Dream Reasoner** and Hindsight | Retains reviewed experience and relates VIGIL's reflections on itself, the world and its works across time | Candidate reflective self-model, continuity question or future experiment |
+| Method learning | `trace_compiler.py`, event log and Hindsight | Detects repetition, records candidate discoveries and recalls only reviewed history | Candidate lesson, correction or human-approved method transfer |
+
+## Early calibration artifacts
 
 The following images are among the first artifacts produced while VIGIL's creative and critical architecture was being constructed and calibrated. They are presented as research evidence rather than selected works. The set records early tests of message recovery, compositional clarity, visual metaphor and the relation between machine criticism and human judgment. Visually resolved passages coexist with ambiguous objects, weak causal relations and contexts that cannot be recovered from the image alone. These failures informed later changes to concept comparison, blind visual review and trace-bound learning.
 
@@ -124,112 +228,6 @@ The following images are among the first artifacts produced while VIGIL's creati
     </td>
   </tr>
 </table>
-
-### Current modules
-
-The table documents the working prototype while implementation remains private. Agent names describe decision roles; script names identify the runtime surfaces planned for the later code release.
-
-| Stage | Agent or runtime surface | Responsibility | Recorded result |
-|---|---|---|---|
-| Evidence collection | `vigil_sensors.py` | Queries the source registry, normalizes records, records failures and reports coverage gaps | Dated evidence packet with source IDs and claim permissions |
-| World interpretation | **World Reader** through `vigil_reasoning.py` | Reads the current packet independently, selects one tension and states its factual boundary or refusal | World read with counter-reading and cited signal IDs |
-| Associative recall | **Hindsight Recall** through `vigil_reasoning.py` | Retrieves reviewed traces, failures and theory only after the current event has been framed | Advisory recall; no factual or procedural authority |
-| Artistic reasoning | **Artistic Reasoner** through `vigil_reasoning.py` | Chooses a theoretical mode and develops five distinct positions with explicit message designs | Five concepts with subject, action, consequence and uncertainty |
-| Pre-render review | **Concept Critic** through `vigil_reasoning.py` | Compares written concept descriptions before any image is generated and checks whether the proposed mechanism can survive without explanatory prose | Comparative review and a narrow clarity gate |
-| Visual translation | **Creative Sight** and **Prompt Director** through `vigil_creative_engine.py` | Converts each position into a scene, composition, material action and generation instruction | Five production scenes and prompts |
-| Image production | **Image gateway** | Generates all five works through GPT Image 2 under the recorded model policy | Five bound image artifacts |
-| Visual review | **Visual Critic** through `visual_critic.py` | Reads finished images before seeing their intended meaning, then performs an informed comparison | Artifact reviews and machine ranking |
-| Trace integrity | `trace_contract.py` and `vigil_creative_engine.py` | Binds sources, alternatives, prompts, files, hashes, critiques, structured self-reflection and human verdicts | Canonical append-only episode trace |
-| Reflective memory | Artistic Reasoner, **Dream Reasoner** and Hindsight | Retains reviewed experience and relates VIGIL's reflections on itself, the world and its works across time | Candidate reflective self-model, continuity question or future experiment |
-| Method learning | `trace_compiler.py`, event log and Hindsight | Detects repetition, records candidate discoveries and recalls only reviewed history | Candidate lesson, correction or human-approved method transfer |
-
-## Why build it?
-
-Creative work is usually judged after the result exists. The decisive moment remains hidden: why one possibility survived, why another disappeared and what could change the maker's method.
-
-VIGIL turns that hidden interval into research material. Every public claim has a source boundary. Every cycle retains rejected positions. The visual critic first reads the image without access to the prompt. The machine's final choice is fixed before the human response. A lesson enters active memory only after it survives another context and receives human approval.
-
-This makes the project useful for studying creativity without reducing it to a single score. The object of study is the path between evidence, association, form, judgment and revision.
-
-## What is actually formalized
-
-VIGIL uses two kinds of formalization. **Runtime computations** are arithmetic operations executed by Python. The **formal decision model** describes the variables available to an agent and the structure of its judgment without pretending that interpretation is a numerical optimizer. VIGIL does not calculate artistic value or derive the winning image from a weighted score.
-
-### Runtime computations: coverage and balance
-
-For each run, the system returns the number of registered sensors and the number the current runtime can query. Their reported ratio is:
-
-$$
-C_{run}=\frac{N_{queryable}}{N_{registered}}
-$$
-
-The 5 August 2026 snapshot gives $C_{run}=13/20=0.65$. Python produces both counts; the ratio is derived in the report. It describes technical availability and says nothing about the truth, independence or moral importance of the returned records. The following cap is executed directly. To prevent a prolific source from dominating by volume, the reasoning view retains at most eight records from any one sensor:
-
-$$
-n'_s=\min(n_s,8)
-$$
-
-### Formal decision model: World Reader
-
-For every signal it retains, the World Reader records six bounded judgments:
-
-$$
-x_i=(e_i,\Delta_i,c_i,r_i,d_i,a_i),
-\qquad 0\leq x_{i,m}\leq4
-$$
-
-They describe evidence strength, change, consequence, systemic reach, duration and an attention gap. This is a mathematical model of the agent's input and judgment surface. The agent assigns the coordinates under a validated schema; Python checks their range and provenance but does not calculate them or add them into a hidden importance score. The World Reader must still state why a signal matters now, where the claim ends and what counter-reading remains possible.
-
-### Formal decision model: criticism and selection
-
-After generation, the Visual Critic records a fourteen-coordinate diagnostic description for each artifact:
-
-$$
-q_j\in[0,10]^{14}
-$$
-
-The coordinates include first reading, composition, formal necessity, ambiguity, source relation, ethical attention, affect and originality. They are model judgments constrained to the interval by schema, not measurements calculated from pixels. `overall` is a separate holistic judgment, not their mean. VIGIL then compares the five actual images and commits to one through an agent judgment:
-
-$$
-\hat{j}=A\big((I_j,q_j,b_j,k_j)_{j=1}^{5}\big)
-$$
-
-Here $I_j$ is the image, $b_j$ its blind reading, $k_j$ its source-and-concept context, and $A$ denotes the recorded agent decision. The expression is a formal model of the decision path. It names the evidence available to the agent and does not claim a closed numerical solution.
-
-### Runtime computation: learning gate
-
-A candidate belief can be revised only when one exact artifact has a pixel-aware review, an accepted human verdict, an artifact-scoped learning proposal and a critic score at or above the current threshold of 7:
-
-$$
-P(a)=1\Longleftrightarrow R_a\land H_a\land D_a\land(s_a\geq7)
-$$
-
-$R_a$ denotes an attached pixel-aware review, $H_a$ an accepted artifact-bound human verdict and $D_a$ an artifact-scoped learning proposal.
-
-When the gate passes, confidence is damped toward the new evidence with $\alpha=0.25$:
-
-$$
-b_{t+1}=\min\left(1,\max\left(0,(1-\alpha)b_t+\alpha e_t\right)\right),
-\qquad e_t=s_a/10
-$$
-
-This formula is implemented in the runtime and the result is rounded to three decimal places. The update changes confidence in a named working hypothesis. It does not prove that an image is good, that a method generalizes or that the machine has learned creativity. A belief remains a hypothesis until it has support from three distinct trace sources; durable procedural rules remain subject to human review and transfer testing.
-
-The current use of exactly five candidates and the pre-render clarity gate belongs to the v6 alpha study design. Five gives a comparable choice set; the clarity gate tests whether a proposed central relation survives without explanatory prose. Neither is presented as a universal theory of art.
-
-The same gate creates a known methodological pressure. The current concept schema asks every candidate to expose a subject, an action, a consequence and a target-source metaphor. This improved message recovery after earlier images became opaque, but it also favors causal visual riddles over indexical, durational, atmospheric, serial or nonrepresentational work. The 30-evening protocol keeps the constraint stable for comparison and renders selected rejected concepts on control days. A proposed later studio mode would let VIGIL choose the work's logic while code continues to protect evidence, identity and trace integrity.
-
-The active runtime contains no lexical or Jaccard novelty score. Repetition is retained as trace evidence and may be discussed by the agent or reported as an attractor; it cannot reject a concept through word overlap.
-
-## A decision trace: *The Crossing Leads Back*
-
-The source packet concerned a mass crossing into Ceuta followed by the return of most migrants to Morocco. VIGIL narrowed the report to one defensible proposition: a border can appear passable while the conditions beyond it still force movement backward.
-
-The first image used a gate and a conveyor. It failed because the device had no recognizable purpose. Human criticism identified that failure. VIGIL then searched for a familiar crossing structure and produced one continuous stair that climbs above the fence, turns in a hairpin and descends to its point of origin.
-
-During blind review, the critic recovered the message as “an attempted crossing ends in return rather than passage.” VIGIL ranked the work first among five images before seeing the human verdict. Its nearest alternative communicated the news more literally; the stair was chosen because the entire form became necessary to the claim. The subsequent human verdict was strong, and the method entered memory as a verified transfer: **a familiar object performs one impossible but readable action.**
-
-The source, initial failure, image request, generated artifact, blind review, machine ranking and human verdict remain connected in one trace. See [Provenance](PROVENANCE.md).
 
 ## What informs VIGIL
 
